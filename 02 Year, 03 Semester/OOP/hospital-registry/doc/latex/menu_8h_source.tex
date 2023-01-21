@@ -1,0 +1,54 @@
+\hypertarget{menu_8h_source}{}\doxysection{menu.\+h}
+\label{menu_8h_source}\index{include/menu.h@{include/menu.h}}
+\mbox{\hyperlink{menu_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef REGISTRY\_MENU\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define REGISTRY\_MENU\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{menu_item_8h}{menuItem.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{showable_8h}{showable.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_menu}{Menu}} : \mbox{\hyperlink{class_showable}{Showable}}, \mbox{\hyperlink{class_runnable}{Runnable}} \{}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{public}:}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12     \mbox{\hyperlink{class_menu_abb97a2f140c52a42d00c098662a6efdf}{Menu}}(std::initializer\_list<MenuItem> menuItems);}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_menu_ace2b7bc2c2673c8352770669db4ef803}{Menu}}(\textcolor{keyword}{const} std::vector<MenuItem> \&menuItems);}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16     \mbox{\hyperlink{class_menu_ad466dd83355124a6ed958430450bfe94}{Menu}}();}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18     \mbox{\hyperlink{class_menu_ac372d08c63b810edae06692c51b5307d}{\string~Menu}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_add06f0eb8fb8cd901445e2eeeff92356}{SetRunning}}(\textcolor{keywordtype}{bool} running);}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_a8318478e4b122dfb792cb378620a6c51}{SetMenuItems}}(\textcolor{keyword}{const} std::vector<MenuItem> \&menuItems);}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_menu_af31faece6358dfbe8cceca3872edc009}{IsRunning}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     std::vector<MenuItem> \mbox{\hyperlink{class_menu_ae7377d5afd94e2e69a4194c6d6f64723}{GetMenuItems}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     std::string \mbox{\hyperlink{class_menu_a2b0d3f0dd62c610a604d34cc4a3ea0ba}{ToString}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_a4021136ef017c8e57a9ac0c9fba86a38}{Show}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_afa24399094e7ce25a5cd58f52de619d0}{Run}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{keyword}{private}:}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     std::vector<MenuItem> menuItems\_;}
+\DoxyCodeLine{37     \textcolor{keywordtype}{bool} running\_;}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     \textcolor{keywordtype}{int} GetInput();}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} Perform(\textcolor{keywordtype}{int} select);}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     \textcolor{keywordtype}{bool} Quit();}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//REGISTRY\_MENU\_H}}
+
+\end{DoxyCode}

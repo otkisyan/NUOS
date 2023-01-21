@@ -1,0 +1,8 @@
+<map id="Showable" name="Showable">
+<area shape="rect" id="node1" title=" " alt="" coords="69,5,147,31"/>
+<area shape="rect" id="node2" href="$class_date.html" title=" " alt="" coords="5,79,56,104"/>
+<area shape="rect" id="node3" href="$class_menu.html" title=" " alt="" coords="81,79,135,104"/>
+<area shape="rect" id="node4" href="$class_person.html" title=" " alt="" coords="159,79,222,104"/>
+<area shape="rect" id="node5" href="$class_doctor.html" title=" " alt="" coords="116,152,177,177"/>
+<area shape="rect" id="node6" href="$class_patient.html" title=" " alt="" coords="202,152,265,177"/>
+</map>

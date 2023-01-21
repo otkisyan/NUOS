@@ -1,0 +1,109 @@
+\hypertarget{class_menu_item}{}\doxysection{Menu\+Item Class Reference}
+\label{class_menu_item}\index{MenuItem@{MenuItem}}
+
+
+{\ttfamily \#include $<$menu\+Item.\+h$>$}
+
+
+
+Inheritance diagram for Menu\+Item\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{class_menu_item__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Menu\+Item\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{class_menu_item__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_menu_item_a753f75a0f0eb1c9b10388f1c06de92da}{Menu\+Item}} (const std\+::string \&text, const std\+::function$<$ void()$>$ \&function)
+\item 
+\mbox{\hyperlink{class_menu_item_ae081df191fc4e9e84721f5ce9323132f}{Menu\+Item}} ()
+\item 
+\mbox{\hyperlink{class_menu_item_a576c5d9b360a5257327a058c05cf6fa0}{$\sim$\+Menu\+Item}} () override
+\item 
+void \mbox{\hyperlink{class_menu_item_a2bd49c94f54c3cb405110bfe3ac2c646}{Set\+Text}} (const std\+::string \&text)
+\item 
+void \mbox{\hyperlink{class_menu_item_a5d7ddc36be97cd48bb8b0519e9feb1ac}{Set\+Function}} (const std\+::function$<$ void()$>$ \&function)
+\item 
+std\+::string \mbox{\hyperlink{class_menu_item_af4475ec180cb16359047277ec5d21ba0}{Get\+Text}} () const
+\item 
+std\+::function$<$ void()$>$ \mbox{\hyperlink{class_menu_item_a6f4863036b6d8a942543f93741bbc17f}{Get\+Function}} () const
+\item 
+void \mbox{\hyperlink{class_menu_item_af3680a22ed30b080077fd80d6773ad48}{Run}} () override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_menu_item_a753f75a0f0eb1c9b10388f1c06de92da}\label{class_menu_item_a753f75a0f0eb1c9b10388f1c06de92da}} 
+\index{MenuItem@{MenuItem}!MenuItem@{MenuItem}}
+\index{MenuItem@{MenuItem}!MenuItem@{MenuItem}}
+\doxysubsubsection{\texorpdfstring{MenuItem()}{MenuItem()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Menu\+Item\+::\+Menu\+Item (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text,  }\item[{const std\+::function$<$ void()$>$ \&}]{function }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_menu_item_ae081df191fc4e9e84721f5ce9323132f}\label{class_menu_item_ae081df191fc4e9e84721f5ce9323132f}} 
+\index{MenuItem@{MenuItem}!MenuItem@{MenuItem}}
+\index{MenuItem@{MenuItem}!MenuItem@{MenuItem}}
+\doxysubsubsection{\texorpdfstring{MenuItem()}{MenuItem()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Menu\+Item\+::\+Menu\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_menu_item_a576c5d9b360a5257327a058c05cf6fa0}\label{class_menu_item_a576c5d9b360a5257327a058c05cf6fa0}} 
+\index{MenuItem@{MenuItem}!````~MenuItem@{$\sim$MenuItem}}
+\index{````~MenuItem@{$\sim$MenuItem}!MenuItem@{MenuItem}}
+\doxysubsubsection{\texorpdfstring{$\sim$MenuItem()}{~MenuItem()}}
+{\footnotesize\ttfamily Menu\+Item\+::$\sim$\+Menu\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_menu_item_a6f4863036b6d8a942543f93741bbc17f}\label{class_menu_item_a6f4863036b6d8a942543f93741bbc17f}} 
+\index{MenuItem@{MenuItem}!GetFunction@{GetFunction}}
+\index{GetFunction@{GetFunction}!MenuItem@{MenuItem}}
+\doxysubsubsection{\texorpdfstring{GetFunction()}{GetFunction()}}
+{\footnotesize\ttfamily std\+::function$<$ void()$>$ Menu\+Item\+::\+Get\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_menu_item_af4475ec180cb16359047277ec5d21ba0}\label{class_menu_item_af4475ec180cb16359047277ec5d21ba0}} 
+\index{MenuItem@{MenuItem}!GetText@{GetText}}
+\index{GetText@{GetText}!MenuItem@{MenuItem}}
+\doxysubsubsection{\texorpdfstring{GetText()}{GetText()}}
+{\footnotesize\ttfamily string Menu\+Item\+::\+Get\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_menu_item_af3680a22ed30b080077fd80d6773ad48}\label{class_menu_item_af3680a22ed30b080077fd80d6773ad48}} 
+\index{MenuItem@{MenuItem}!Run@{Run}}
+\index{Run@{Run}!MenuItem@{MenuItem}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily void Menu\+Item\+::\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_runnable_a6d5fbd0e55c22d7c40dafa9d23de3ca4}{Runnable}}.
+
+\mbox{\Hypertarget{class_menu_item_a5d7ddc36be97cd48bb8b0519e9feb1ac}\label{class_menu_item_a5d7ddc36be97cd48bb8b0519e9feb1ac}} 
+\index{MenuItem@{MenuItem}!SetFunction@{SetFunction}}
+\index{SetFunction@{SetFunction}!MenuItem@{MenuItem}}
+\doxysubsubsection{\texorpdfstring{SetFunction()}{SetFunction()}}
+{\footnotesize\ttfamily void Menu\+Item\+::\+Set\+Function (\begin{DoxyParamCaption}\item[{const std\+::function$<$ void()$>$ \&}]{function }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_menu_item_a2bd49c94f54c3cb405110bfe3ac2c646}\label{class_menu_item_a2bd49c94f54c3cb405110bfe3ac2c646}} 
+\index{MenuItem@{MenuItem}!SetText@{SetText}}
+\index{SetText@{SetText}!MenuItem@{MenuItem}}
+\doxysubsubsection{\texorpdfstring{SetText()}{SetText()}}
+{\footnotesize\ttfamily void Menu\+Item\+::\+Set\+Text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{menu_item_8h}{menu\+Item.\+h}}\item 
+src/\mbox{\hyperlink{menu_item_8cpp}{menu\+Item.\+cpp}}\end{DoxyCompactItemize}

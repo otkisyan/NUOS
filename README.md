@@ -1,0 +1,17 @@
+# NUOS Exercises, Assignments and Projects
+Here you can find my coding activity during my university studies. The documentation of projects is not located here.
+These are not all the courses and assignments during semesters - only the coding ones.
+
+### The folder structure is as follows:
+- 01 Year, 01 Semester
+  - BOP1 - Basics of Programming 1
+  - BSE1 - Basics of Software Engineering 1
+- 01 Year, 02 Semester
+  - BOP2 - Basics of Programming 2
+  - BCO - Basics of Computer Organization
+  - BSE2 - Basics of Software Engineering 2
+- 02 Year, 03 Semester
+  - CA - Computer Architecture
+  - DJTL - Development Technologies in JVM Languages
+  - DMSE - Discrete Mathematics in Software Engineering
+  - OOP - Object-Oriented Programming

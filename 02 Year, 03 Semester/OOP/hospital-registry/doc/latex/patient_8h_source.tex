@@ -1,0 +1,72 @@
+\hypertarget{patient_8h_source}{}\doxysection{patient.\+h}
+\label{patient_8h_source}\index{include/patient.h@{include/patient.h}}
+\mbox{\hyperlink{patient_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef REGISTRY\_PATIENT\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define REGISTRY\_PATIENT\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{person_8h}{person.h}}"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_patient_id}{PatientId}} \{}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_patient_id_a7a7a29381156ca50856051b9f992453f}{id}};}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10     \textcolor{keyword}{explicit} \mbox{\hyperlink{struct_patient_id_ae062b477fb2d56e28e39c88cc91ee649}{PatientId}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id});}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12     \mbox{\hyperlink{struct_patient_id_ae062b477fb2d56e28e39c88cc91ee649}{PatientId}}();}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14     \mbox{\hyperlink{struct_patient_id}{PatientId}} \&\mbox{\hyperlink{struct_patient_id_a747b7d4d4307cd77b6e09e03ba05025c}{operator=}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id});}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \};}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 std::istream \&\mbox{\hyperlink{patient_8h_a1c016e14a957283660e5e32ef40a7f20}{operator>>}}(std::istream \&is, \mbox{\hyperlink{struct_patient_id}{PatientId}} \&d);}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 std::ostream \&\mbox{\hyperlink{patient_8h_a4e1ed398d9a73f11277e7fb4a4e844bf}{operator<<}}(std::ostream \&os, \mbox{\hyperlink{struct_patient_id}{PatientId}} \&d);}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keywordtype}{bool} \mbox{\hyperlink{patient_8h_a0cbafa05b6f44942a517ad0c991bb3c5}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{struct_patient_id}{PatientId}} \&d1, \textcolor{keyword}{const} \mbox{\hyperlink{struct_patient_id}{PatientId}} \&d2);}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{class }\mbox{\hyperlink{class_patient}{Patient}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_person}{Person}} \{}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{public}:}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \mbox{\hyperlink{class_patient_af34d7593aee6534e995703883265583c}{Patient}}(\textcolor{keyword}{const} std::string \&name, \textcolor{keyword}{const} std::string \&surname, \textcolor{keyword}{const} std::string \&phone, \textcolor{keywordtype}{int} age);}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \mbox{\hyperlink{class_patient_af34d7593aee6534e995703883265583c}{Patient}}();}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \mbox{\hyperlink{class_patient_a774924b29ec06d54dcfd35ba3c5c2cf8}{\string~Patient}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     std::string \mbox{\hyperlink{class_patient_a37e567cfc984c0e6f638dafa4ed27afc}{ToString}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_patient_a721659c0dcd490ef3ee72052a41f9967}{Show}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_patient_acd093a9b3e0b0be37c41325b24f3cc97}{SetPhone}}(\textcolor{keyword}{const} std::string \&phone);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_patient_ab7eda48c9544a3fb55c47f0b30b255ed}{SetAge}}(\textcolor{keywordtype}{int} age);}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     std::string \mbox{\hyperlink{class_patient_a2beefdc8788fbe47360c4d8d5f94115b}{GetPhone}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_patient_a75caaad926db31fd4eb1416007ab3a9a}{GetAge}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47     \mbox{\hyperlink{struct_patient_id}{PatientId}} \mbox{\hyperlink{class_patient_a4053668daf4dcada39209bf64dcd26e1}{GetId}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     \textcolor{keyword}{friend} std::ostream \&\mbox{\hyperlink{class_patient_abcff3ab1c9bb9da283754bb9c6f45bf4}{operator<<}}(std::ostream \&os, \mbox{\hyperlink{class_patient}{Patient}} \&p);}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     \textcolor{keyword}{friend} std::istream \&\mbox{\hyperlink{class_patient_a5c9720715fd80be625334e09d08c93d9}{operator>>}}(std::istream \&is, \mbox{\hyperlink{class_patient}{Patient}} \&p);}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{keyword}{private}:}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     \textcolor{keyword}{static} \textcolor{keywordtype}{int} count\_;}
+\DoxyCodeLine{56     \mbox{\hyperlink{struct_patient_id}{PatientId}} id\_;}
+\DoxyCodeLine{57     std::string phone\_;}
+\DoxyCodeLine{58     \textcolor{keywordtype}{int} age\_;}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \};}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 std::ostream \&\mbox{\hyperlink{patient_8h_a4e1ed398d9a73f11277e7fb4a4e844bf}{operator<<}}(std::ostream \&os, \mbox{\hyperlink{class_patient}{Patient}} \&p);}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 std::istream \&\mbox{\hyperlink{patient_8h_a1c016e14a957283660e5e32ef40a7f20}{operator>>}}(std::istream \&is, \mbox{\hyperlink{class_patient}{Patient}} \&p);}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//REGISTRY\_PATIENT\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,6 @@
+<map id="Runnable" name="Runnable">
+<area shape="rect" id="node1" title=" " alt="" coords="89,5,166,31"/>
+<area shape="rect" id="node2" href="$class_hospital.html" title=" " alt="" coords="5,79,76,104"/>
+<area shape="rect" id="node3" href="$class_menu.html" title=" " alt="" coords="100,79,155,104"/>
+<area shape="rect" id="node4" href="$class_menu_item.html" title=" " alt="" coords="179,79,259,104"/>
+</map>

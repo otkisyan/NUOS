@@ -1,0 +1,66 @@
+\hypertarget{doctor_8h_source}{}\doxysection{doctor.\+h}
+\label{doctor_8h_source}\index{include/doctor.h@{include/doctor.h}}
+\mbox{\hyperlink{doctor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef REGISTRY\_DOCTOR\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define REGISTRY\_DOCTOR\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{person_8h}{person.h}}"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_doctor_id}{DoctorId}} \{}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_doctor_id_a741c11b772367ac1f4eb2622507a229e}{id}};}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10     \textcolor{keyword}{explicit} \mbox{\hyperlink{struct_doctor_id_ac3820e9535127a519432c061ca4db3af}{DoctorId}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id});}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12     \mbox{\hyperlink{struct_doctor_id_ac3820e9535127a519432c061ca4db3af}{DoctorId}}();}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14     \mbox{\hyperlink{struct_doctor_id}{DoctorId}} \&\mbox{\hyperlink{struct_doctor_id_a3bc49278968ec557ba0ef163c8db8c8a}{operator=}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id});}
+\DoxyCodeLine{15 \};}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 std::istream \&\mbox{\hyperlink{doctor_8h_a0c56b3e62de5eab985706125b6cd0f11}{operator>>}}(std::istream \&is, \mbox{\hyperlink{struct_doctor_id}{DoctorId}} \&d);}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 std::ostream \&\mbox{\hyperlink{doctor_8h_a34206d101ba6c9eadc213da391e896a2}{operator<<}}(std::ostream \&os, \mbox{\hyperlink{struct_doctor_id}{DoctorId}} \&d);}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keywordtype}{bool} \mbox{\hyperlink{doctor_8h_a5f9944560cbf8435ec84272cd116b2a8}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{struct_doctor_id}{DoctorId}} \&d1, \textcolor{keyword}{const} \mbox{\hyperlink{struct_doctor_id}{DoctorId}} \&d2);}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{class }\mbox{\hyperlink{class_doctor}{Doctor}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_person}{Person}} \{}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{public}:}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \mbox{\hyperlink{class_doctor_ac71a90316796a8e72a8d9db536de274a}{Doctor}}(\textcolor{keyword}{const} std::string \&name, \textcolor{keyword}{const} std::string \&surname, \textcolor{keyword}{const} std::string \&qualification);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \mbox{\hyperlink{class_doctor_ac71a90316796a8e72a8d9db536de274a}{Doctor}}();}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \mbox{\hyperlink{class_doctor_abc599f98104ade564e6af95d3250e316}{\string~Doctor}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     std::string \mbox{\hyperlink{class_doctor_afa6b4a1ab5f497f762392ecfad3ecbc1}{ToString}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_doctor_ae64f12fd0e0eeae350f7852d4bba88fb}{Show}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_doctor_a7c8469af10a72bd41871551d04a10cc8}{SetQualification}}(\textcolor{keyword}{const} std::string \&qualification);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     std::string \mbox{\hyperlink{class_doctor_ab83abbd32432f90a2fd2bc6bd7a9d004}{GetQualification}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     \mbox{\hyperlink{struct_doctor_id}{DoctorId}} \mbox{\hyperlink{class_doctor_a2b1ad03875e834d9b79e401e8304e99a}{GetId}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \textcolor{keyword}{friend} std::ostream \&\mbox{\hyperlink{class_doctor_ab6c49577e75a5707128244a3fc220f66}{operator<<}}(std::ostream \&os, \mbox{\hyperlink{class_doctor}{Doctor}} \&d);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{keyword}{friend} std::istream \&\mbox{\hyperlink{class_doctor_ac4d167341a3bd86002c4fa5dfdf9e148}{operator>>}}(std::istream \&is, \mbox{\hyperlink{class_doctor}{Doctor}} \&d);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{keyword}{private}:}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50     \textcolor{keyword}{static} \textcolor{keywordtype}{int} count\_;}
+\DoxyCodeLine{51     \mbox{\hyperlink{struct_doctor_id}{DoctorId}} id\_;}
+\DoxyCodeLine{52     std::string qualification\_;}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 \};}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 std::ostream \&\mbox{\hyperlink{doctor_8h_a34206d101ba6c9eadc213da391e896a2}{operator<<}}(std::ostream \&os, \mbox{\hyperlink{class_doctor}{Doctor}} \&d);}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 std::istream \&\mbox{\hyperlink{doctor_8h_a0c56b3e62de5eab985706125b6cd0f11}{operator>>}}(std::istream \&is, \mbox{\hyperlink{class_doctor}{Doctor}} \&d);}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//REGISTRY\_DOCTOR\_H}}
+
+\end{DoxyCode}

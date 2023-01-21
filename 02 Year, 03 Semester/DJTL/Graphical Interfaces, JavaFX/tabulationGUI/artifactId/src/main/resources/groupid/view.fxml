@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupid.PrimaryController">
+   <children>
+      <Label alignment="CENTER" layoutX="185.0" layoutY="33.0" text="Введіть початок інтервалу:" />
+      <TextField fx:id="start" alignment="CENTER" layoutX="213.0" layoutY="63.0" prefHeight="26.0" prefWidth="80.0" promptText="000" />
+      <Label alignment="CENTER" layoutX="185.0" layoutY="98.0" text="Введіть кінець інтервалу:" />
+      <TextField fx:id="end" alignment="CENTER" layoutX="213.0" layoutY="125.0" prefHeight="26.0" prefWidth="80.0" promptText="000" />
+      <Label alignment="CENTER" layoutX="185.0" layoutY="163.0" text="Введіть крок інтервалу:">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <TextField fx:id="step" alignment="CENTER" layoutX="213.0" layoutY="190.0" prefHeight="26.0" prefWidth="80.0" promptText="000" />
+      <Label alignment="CENTER" layoutX="181.0" layoutY="230.0" text="Введіть значення змінної A">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="aValue" alignment="CENTER" layoutX="213.0" layoutY="255.0" prefHeight="26.0" prefWidth="80.0" promptText="000" />
+      <Button fx:id="calculate" layoutX="216.0" layoutY="297.0" mnemonicParsing="false" text="Обчислити" />
+      <Label alignment="CENTER" layoutX="184.0" layoutY="362.0" text="Кількість кроків табуляції" />
+      <TextField fx:id="numberOfSteps" alignment="CENTER" editable="false" layoutX="217.0" layoutY="389.0" prefHeight="26.0" prefWidth="80.0" promptText="000" />
+      <Label alignment="CENTER" layoutX="82.0" layoutY="440.0" text="Найбільше значення функції" />
+      <TextField fx:id="biggestY" alignment="CENTER" editable="false" layoutX="121.0" layoutY="467.0" prefHeight="26.0" prefWidth="80.0" promptText="000" />
+      <Label alignment="CENTER" layoutX="135.0" layoutY="509.0" text="Аргумент" />
+      <TextField fx:id="biggestX" alignment="CENTER" editable="false" layoutX="121.0" layoutY="533.0" prefHeight="26.0" prefWidth="80.0" promptText="000" />
+      <Label alignment="CENTER" layoutX="281.0" layoutY="440.0" text="Найменше значення функції" />
+      <TextField fx:id="smallestY" alignment="CENTER" editable="false" layoutX="322.0" layoutY="467.0" prefHeight="26.0" prefWidth="80.0" promptText="000" />
+      <Label alignment="CENTER" layoutX="334.0" layoutY="509.0" text="Аргумент" />
+      <TextField fx:id="smallestX" alignment="CENTER" editable="false" layoutX="320.0" layoutY="533.0" prefHeight="26.0" prefWidth="80.0" promptText="000" />
+      <Label alignment="CENTER" layoutX="110.0" layoutY="571.0" text="Сумма елементів" />
+      <TextField fx:id="sumOfElements" alignment="CENTER" editable="false" layoutX="121.0" layoutY="599.0" prefHeight="26.0" prefWidth="80.0" promptText="000" />
+      <Label alignment="CENTER" layoutX="294.0" layoutY="571.0" text="Середнє арифметичне" />
+      <TextField fx:id="averageOfElements" alignment="CENTER" editable="false" layoutX="320.0" layoutY="599.0" prefHeight="26.0" prefWidth="80.0" promptText="000" />
+   </children>
+</AnchorPane>

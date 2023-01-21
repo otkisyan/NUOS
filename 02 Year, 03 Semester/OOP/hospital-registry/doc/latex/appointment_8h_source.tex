@@ -1,0 +1,72 @@
+\hypertarget{appointment_8h_source}{}\doxysection{appointment.\+h}
+\label{appointment_8h_source}\index{include/appointment.h@{include/appointment.h}}
+\mbox{\hyperlink{appointment_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef REGISTRY\_APPOINTMENT\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define REGISTRY\_APPOINTMENT\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}../include/date.h"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_appointment_id}{AppointmentId}} \{}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_appointment_id_a0814fc6b960fac0dc4a546e221d1c2e8}{id}};}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10     \textcolor{keyword}{explicit} \mbox{\hyperlink{struct_appointment_id_ae57e1f1148d1b6d48017e2ba403800ae}{AppointmentId}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id});}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12     \mbox{\hyperlink{struct_appointment_id_ae57e1f1148d1b6d48017e2ba403800ae}{AppointmentId}}();}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14     \mbox{\hyperlink{struct_appointment_id}{AppointmentId}} \&\mbox{\hyperlink{struct_appointment_id_ae339c0d45e3e5f6b914350da17d79263}{operator=}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id});}
+\DoxyCodeLine{15 \};}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 std::istream \&\mbox{\hyperlink{appointment_8h_a3cbd0d88c7150f9116d7ae69c2183447}{operator>>}}(std::istream \&is, \mbox{\hyperlink{struct_appointment_id}{AppointmentId}} \&d);}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 std::ostream \&\mbox{\hyperlink{appointment_8h_a2b70b896badf968bb8fc4eda0a43924e}{operator<<}}(std::ostream \&os, \mbox{\hyperlink{struct_appointment_id}{AppointmentId}} \&d);}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keywordtype}{bool} \mbox{\hyperlink{appointment_8h_ae7fa4873f3e5646667e12eb6dc8c8a60}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{struct_appointment_id}{AppointmentId}} \&d1, \textcolor{keyword}{const} \mbox{\hyperlink{struct_appointment_id}{AppointmentId}} \&d2);}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{class }\mbox{\hyperlink{class_appointment}{Appointment}} \{}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{public}:}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \mbox{\hyperlink{class_appointment_ad86e280b323cfe013444ef7626332ca1}{Appointment}}(\textcolor{keyword}{const} std::string \&patientKey, \textcolor{keyword}{const} std::string \&doctorKey, \textcolor{keyword}{const} \mbox{\hyperlink{class_date}{Date}} \&date);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \mbox{\hyperlink{class_appointment_a6f5ebbe07e02feaab6600c0f6297e694}{Appointment}}();}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \mbox{\hyperlink{class_appointment_a3fb7487548e10abc6e581a550f1d800d}{\string~Appointment}}();}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_appointment_aaf72e8ee9207f8a28c5c2848f6654bc4}{SetDate}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_date}{Date}} \&date);}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_appointment_ab6c312bc029e67590b6647490e75a6b4}{SetPatientKey}}(\textcolor{keyword}{const} std::string \&patientKey);}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_appointment_a552ba4d917f21e37547376ecaececbd2}{SetDoctorKey}}(\textcolor{keyword}{const} std::string \&doctorKey);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \mbox{\hyperlink{class_date}{Date}} \mbox{\hyperlink{class_appointment_a37cf572c4f794dbb0c94a70b70a57b86}{GetDate}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     std::string \mbox{\hyperlink{class_appointment_a5af03e6039506305be93a6f0966567fb}{GetPatientKey}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     std::string \mbox{\hyperlink{class_appointment_afba1992336c0a6a6dfbc2f75bb51441d}{GetDoctorKey}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \mbox{\hyperlink{struct_appointment_id}{AppointmentId}} \mbox{\hyperlink{class_appointment_ac50a174de6df3c1b14ccf386f4658692}{GetId}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     \textcolor{keyword}{friend} std::ostream \&\mbox{\hyperlink{class_appointment_a8e5c8601e0cc972200b32369fe404f2f}{operator<<}}(std::ostream \&os, \mbox{\hyperlink{class_appointment}{Appointment}} \&a);}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50     \textcolor{keyword}{friend} std::istream \&\mbox{\hyperlink{class_appointment_a1ae60c69de6a684144382b58969e3625}{operator>>}}(std::istream \&is, \mbox{\hyperlink{class_appointment}{Appointment}} \&a);}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{keyword}{private}:}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54     \textcolor{keyword}{static} \textcolor{keywordtype}{int} count\_;}
+\DoxyCodeLine{55     \mbox{\hyperlink{struct_appointment_id}{AppointmentId}} id\_;}
+\DoxyCodeLine{56     std::string patientKey\_;}
+\DoxyCodeLine{57     std::string doctorKey\_;}
+\DoxyCodeLine{58     \mbox{\hyperlink{class_date}{Date}} date\_;}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \};}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 std::ostream \&\mbox{\hyperlink{appointment_8h_a2b70b896badf968bb8fc4eda0a43924e}{operator<<}}(std::ostream \&os, \mbox{\hyperlink{class_appointment}{Appointment}} \&a);}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 std::istream \&\mbox{\hyperlink{appointment_8h_a3cbd0d88c7150f9116d7ae69c2183447}{operator>>}}(std::istream \&is, \mbox{\hyperlink{class_appointment}{Appointment}} \&a);}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//REGISTRY\_APPOINTMENT\_H}}
+
+\end{DoxyCode}

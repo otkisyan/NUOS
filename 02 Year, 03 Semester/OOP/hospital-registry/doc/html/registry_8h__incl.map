@@ -1,0 +1,11 @@
+<map id="include/registry.h" name="include/registry.h">
+<area shape="rect" id="node1" title=" " alt="" coords="111,5,230,31"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,79,64,104"/>
+<area shape="rect" id="node3" href="$patient_8h.html" title=" " alt="" coords="88,79,160,104"/>
+<area shape="rect" id="node7" href="$doctor_8h.html" title=" " alt="" coords="185,79,253,104"/>
+<area shape="rect" id="node8" href="$appointment_8h.html" title=" " alt="" coords="277,79,381,104"/>
+<area shape="rect" id="node4" href="$person_8h.html" title=" " alt="" coords="176,152,248,177"/>
+<area shape="rect" id="node5" title=" " alt="" coords="195,225,250,251"/>
+<area shape="rect" id="node6" href="$showable_8h.html" title=" " alt="" coords="280,225,368,251"/>
+<area shape="rect" id="node9" href="$date_8h.html" title=" " alt="" coords="272,152,387,177"/>
+</map>

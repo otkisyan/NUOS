@@ -1,0 +1,49 @@
+\hypertarget{file_8h_source}{}\doxysection{file.\+h}
+\label{file_8h_source}\index{include/file.h@{include/file.h}}
+\mbox{\hyperlink{file_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef REGISTRY\_FILE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define REGISTRY\_FILE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{patient_8h}{patient.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{doctor_8h}{doctor.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{appointment_8h}{appointment.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_file}{File}} \{}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{public}:}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13     \mbox{\hyperlink{class_file_ae039af5807fc385f41b60644725d15d0}{File}}();}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \mbox{\hyperlink{class_file_ac704ebdf5f57d7a1c5ddf409d797fb69}{\string~File}}();}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     std::vector<std::pair<std::string, Appointment>> \mbox{\hyperlink{class_file_ae28249b940db814a903971fd7edffaf3}{ReadFile}}(std::vector<std::pair<std::string, Appointment>> appointments);}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     std::vector<std::pair<std::string, Patient>> \mbox{\hyperlink{class_file_aa5ca57ffb8073050ced913b3cd746b06}{ReadFile}}(std::vector<std::pair<std::string, Patient>> patients);}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     std::vector<std::pair<std::string, Doctor>> \mbox{\hyperlink{class_file_acdd194e43cdb26c43a27389da1770931}{ReadFile}}(std::vector<std::pair<std::string, Doctor>> doctors);}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_a3729680624582828df09d11a9c2ca49e}{WriteFile}}(std::vector<std::pair<std::string, Patient>> patients);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_acbbf663028d84c6728f4ebe5f7a5e29a}{WriteFile}}(std::vector<std::pair<std::string, Doctor>> doctors);}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_a4fb92986c80ebe5ccb0fbfcb91435ab4}{WriteFile}}(std::vector<std::pair<std::string, Appointment>> appointments);}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{keyword}{private}:}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{keyword}{const} std::string kExtension = \textcolor{stringliteral}{"{}.txt"{}};}
+\DoxyCodeLine{32     \textcolor{keyword}{const} std::string kPatientsFileName = \textcolor{stringliteral}{"{}patients"{}};}
+\DoxyCodeLine{33     \textcolor{keyword}{const} std::string kDoctorsFileName = \textcolor{stringliteral}{"{}doctors"{}};}
+\DoxyCodeLine{34     \textcolor{keyword}{const} std::string kAppointmentsFileName = \textcolor{stringliteral}{"{}appointments"{}};}
+\DoxyCodeLine{35     \textcolor{keyword}{const} std::string kDirectory = \textcolor{stringliteral}{"{}../userfiles/"{}};}
+\DoxyCodeLine{36     \textcolor{keyword}{const} std::string kPatientsFilePath = kDirectory + kPatientsFileName + kExtension;}
+\DoxyCodeLine{37     \textcolor{keyword}{const} std::string kDoctorsFilePath = kDirectory + kDoctorsFileName + kExtension;}
+\DoxyCodeLine{38     \textcolor{keyword}{const} std::string kAppointmentsFilePath = kDirectory + kAppointmentsFileName + kExtension;}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//REGISTRY\_FILE\_H}}
+
+\end{DoxyCode}

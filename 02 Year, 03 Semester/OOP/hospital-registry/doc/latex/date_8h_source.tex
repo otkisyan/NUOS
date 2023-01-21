@@ -1,0 +1,67 @@
+\hypertarget{date_8h_source}{}\doxysection{date.\+h}
+\label{date_8h_source}\index{include/date.h@{include/date.h}}
+\mbox{\hyperlink{date_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef REGISTRY\_DATE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define REGISTRY\_DATE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{showable_8h}{showable.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{class_date}{Date}} : \mbox{\hyperlink{class_showable}{Showable}} \{}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{public}:}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11     \mbox{\hyperlink{class_date_a4e59ed4ba66eec61c27460c5d09fa1bd}{Date}}(\textcolor{keywordtype}{int} year, \textcolor{keywordtype}{int} month, \textcolor{keywordtype}{int} day, \textcolor{keywordtype}{int} hour, \textcolor{keywordtype}{int} minute);}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13     \mbox{\hyperlink{class_date_a4e59ed4ba66eec61c27460c5d09fa1bd}{Date}}();}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \mbox{\hyperlink{class_date_a0b4eda5385e88e31e3d05dc4effa362c}{\string~Date}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_date_a795790fc0cde4220ceaf13b5ce232e4a}{SetYear}}(\textcolor{keywordtype}{int} year);}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_date_aa7814f6054a688039338ac1190d74a8d}{SetMonth}}(\textcolor{keywordtype}{int} month);}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_date_a7b6f3262997530ea44b84dc1ff818690}{SetDay}}(\textcolor{keywordtype}{int} day);}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_date_a94905073fa707f6e905727e3c63da277}{SetHour}}(\textcolor{keywordtype}{int} hour);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_date_a7379b5ac6b284711f55248a71bb09e3f}{SetMinute}}(\textcolor{keywordtype}{int} minute);}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_date_ad79ce504482f317ddcfdc4ecad77671f}{GetYear}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_date_af2dcc6ce51dbb2bd798499a149bdffb7}{GetMonth}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_date_a6304a67f1c13b239eb8e80ad68161e40}{GetDay}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_date_ae09be4d1341cffa49a5dafdb1c783a45}{GetHour}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_date_a6a698483d129b63fe36c04d3cbeb4d3f}{GetMinute}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     std::string \mbox{\hyperlink{class_date_ac9bd6cf97c3714404c4b0b5c5bf4c1e9}{ToString}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_date_a9aea0402b7f3fec1bb95f43bc52c5f1b}{Show}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_date_a313cd268fa09c988fae40c979e457da6}{GetNumberOfMonthDays}}(\textcolor{keywordtype}{int} year, \textcolor{keywordtype}{int} month);}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     \textcolor{keyword}{friend} std::ostream \&\mbox{\hyperlink{class_date_a0348f9c465636789765631579e6387e0}{operator<<}}(std::ostream \&os, \mbox{\hyperlink{class_date}{Date}} \&d);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{keyword}{friend} std::istream \&\mbox{\hyperlink{class_date_abf20d922f989d05f4a4dda4b4b8238e9}{operator>>}}(std::istream \&is, \mbox{\hyperlink{class_date}{Date}} \&d);}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{keyword}{private}:}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     \textcolor{keywordtype}{int} year\_;}
+\DoxyCodeLine{50     \textcolor{keywordtype}{int} month\_;}
+\DoxyCodeLine{51     \textcolor{keywordtype}{int} day\_;}
+\DoxyCodeLine{52     \textcolor{keywordtype}{int} hour\_;}
+\DoxyCodeLine{53     \textcolor{keywordtype}{int} minute\_;}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 std::ostream \&\mbox{\hyperlink{date_8h_a0348f9c465636789765631579e6387e0}{operator<<}}(std::ostream \&os, \mbox{\hyperlink{class_date}{Date}} \&d);}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 std::istream \&\mbox{\hyperlink{date_8h_abf20d922f989d05f4a4dda4b4b8238e9}{operator>>}}(std::istream \&is, \mbox{\hyperlink{class_date}{Date}} \&d);}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//REGISTRY\_DATE\_H}}
+
+\end{DoxyCode}

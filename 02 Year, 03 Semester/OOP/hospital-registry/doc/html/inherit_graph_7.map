@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_runnable.html" title=" " alt="" coords="6,55,83,80"/>
+<area shape="rect" id="node2" href="$class_hospital.html" title=" " alt="" coords="137,5,207,31"/>
+<area shape="rect" id="node3" href="$class_menu.html" title=" " alt="" coords="145,104,199,129"/>
+<area shape="rect" id="node4" href="$class_menu_item.html" title=" " alt="" coords="132,55,212,80"/>
+<area shape="rect" id="node5" href="$class_showable.html" title=" " alt="" coords="5,153,84,179"/>
+<area shape="rect" id="node6" href="$class_date.html" title=" " alt="" coords="147,153,197,179"/>
+<area shape="rect" id="node7" href="$class_person.html" title=" " alt="" coords="141,203,203,228"/>
+<area shape="rect" id="node8" href="$class_doctor.html" title=" " alt="" coords="261,177,322,203"/>
+<area shape="rect" id="node9" href="$class_patient.html" title=" " alt="" coords="260,227,323,252"/>
+</map>

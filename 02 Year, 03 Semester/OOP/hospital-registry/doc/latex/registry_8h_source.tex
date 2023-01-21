@@ -1,0 +1,109 @@
+\hypertarget{registry_8h_source}{}\doxysection{registry.\+h}
+\label{registry_8h_source}\index{include/registry.h@{include/registry.h}}
+\mbox{\hyperlink{registry_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef REGISTRY\_REGISTRY\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define REGISTRY\_REGISTRY\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{patient_8h}{patient.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{doctor_8h}{doctor.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{appointment_8h}{appointment.h}}"{}}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_registry}{Registry}} \{}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{public}:}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13     \mbox{\hyperlink{class_registry_a81cb1e3521f20eac2b59c8db0ce6cb56}{Registry}}(\textcolor{keyword}{const} std::vector<std::pair<std::string, Patient>> \&patients,}
+\DoxyCodeLine{14              \textcolor{keyword}{const} std::vector<std::pair<std::string, Doctor>> \&doctors,}
+\DoxyCodeLine{15              \textcolor{keyword}{const} std::vector<std::pair<std::string, Appointment>> \&appointments);}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \mbox{\hyperlink{class_registry_acb15d8aa051bf36ea92a86ee6c00bc3c}{Registry}}();}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \mbox{\hyperlink{class_registry_ac28e339aef39d9d97f1975623c8d8314}{\string~Registry}}();}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     std::vector<std::pair<std::string, Patient>> \mbox{\hyperlink{class_registry_a7f4a4fbdbd96787934a57b565beee7a9}{GetPatients}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     std::vector<std::pair<std::string, Doctor>> \mbox{\hyperlink{class_registry_a70e06fb2200b78ccc4a65000c9cbef4e}{GetDoctors}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     std::vector<std::pair<std::string, Appointment>> \mbox{\hyperlink{class_registry_a09f192d31ac59a15ead8ce67584590bd}{GetAppointments}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_registry_af1ee84f72ea4997311f4540875c8531a}{SetPatients}}(\textcolor{keyword}{const} std::vector<std::pair<std::string, Patient>> \&patients);}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_registry_a183ea2c2563242b557f44586ca94ab66}{SetDoctors}}(\textcolor{keyword}{const} std::vector<std::pair<std::string, Doctor>> \&doctors);}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_registry_af7bf3405a171b248ea5a55ec5f0037f5}{SetAppointments}}(\textcolor{keyword}{const} std::vector<std::pair<std::string, Appointment>> \&appointments);}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_registry_aadc8b34e9a33993269f5b808f172e343}{AddPatient}}();}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_registry_af6eaa82c78086775bee38b6411d72833}{AddDoctor}}();}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_registry_af31c3ae2798ae45d0596fd367cf0031f}{ScheduleAppointment}}();}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_registry_ad883abd1a7b3260514ff2f1d50ddac7d}{RemovePatient}}();}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_registry_aa7f5e93d72a187f2a7d334d458b9e64b}{RemoveDoctor}}();}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_registry_a03049f1c5330992745c2f0275ece055e}{RemoveAppointment}}();}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_registry_a1f717e89ec4ed50dae8c47cdbd69b729}{ShowAllPatients}}();}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_registry_a0e8d8766d2e4f9a83b2fa9616e72955e}{ShowAllDoctors}}();}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_registry_a1bbbce6303a1420d19a55bfc31982306}{ShowAllAppointments}}();}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_registry_a1bd8f042e3389b427b3960ddcb4f45be}{ShowPatientAppointments}}();}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_registry_ad8bc8f2dea3e3db0da000ac39b78f86d}{ShowDoctorAppointments}}();}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{keyword}{private}:}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58     std::vector<std::pair<std::string, Patient>> patients\_;}
+\DoxyCodeLine{59     std::vector<std::pair<std::string, Doctor>> doctors\_;}
+\DoxyCodeLine{60     std::vector<std::pair<std::string, Appointment>> appointments\_;}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62     std::vector<std::pair<std::string, Patient>>::iterator Find(\textcolor{keyword}{const} \mbox{\hyperlink{struct_patient_id}{PatientId}} \&patientId);}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64     std::vector<std::pair<std::string, Doctor>>::iterator Find(\textcolor{keyword}{const} \mbox{\hyperlink{struct_doctor_id}{DoctorId}} \&doctorId);}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66     std::vector<std::pair<std::string, Appointment>>::iterator Find(\textcolor{keyword}{const} \mbox{\hyperlink{struct_appointment_id}{AppointmentId}} \&appointmentId);}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68     std::vector<std::pair<std::string, Appointment>> FindAppointments(\textcolor{keyword}{const} \mbox{\hyperlink{struct_doctor_id}{DoctorId}} \&doctorId);}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70     std::vector<std::pair<std::string, Appointment>> FindAppointments(\textcolor{keyword}{const} \mbox{\hyperlink{struct_patient_id}{PatientId}} \&patientId);}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72     \textcolor{keywordtype}{void} Add(\textcolor{keyword}{const} \mbox{\hyperlink{class_doctor}{Doctor}} \&doctor);}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74     \textcolor{keywordtype}{void} Add(\textcolor{keyword}{const} \mbox{\hyperlink{class_patient}{Patient}} \&patient);}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_registry_af31c3ae2798ae45d0596fd367cf0031f}{ScheduleAppointment}}(\textcolor{keyword}{const} \mbox{\hyperlink{struct_doctor_id}{DoctorId}} \&doctorId, \textcolor{keyword}{const} \mbox{\hyperlink{struct_patient_id}{PatientId}} \&patientId, \textcolor{keyword}{const} \mbox{\hyperlink{class_date}{Date}} \&date);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78     \textcolor{keywordtype}{void} Remove(\textcolor{keyword}{const} \mbox{\hyperlink{struct_patient_id}{PatientId}} \&patientId);}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80     \textcolor{keywordtype}{void} Remove(\textcolor{keyword}{const} \mbox{\hyperlink{struct_doctor_id}{DoctorId}} \&doctorId);}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82     \textcolor{keywordtype}{void} Remove(\textcolor{keyword}{const} \mbox{\hyperlink{struct_appointment_id}{AppointmentId}} \&appointmentId);}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84     \textcolor{keywordtype}{void} ShowAll(\textcolor{keyword}{const} std::vector<std::pair<std::string, Patient>> \&patients) \textcolor{keyword}{const};}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86     \textcolor{keywordtype}{void} ShowAll(\textcolor{keyword}{const} std::vector<std::pair<std::string, Doctor>> \&doctors) \textcolor{keyword}{const};}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88     \textcolor{keywordtype}{void}}
+\DoxyCodeLine{89     ShowAll(\textcolor{keyword}{const} std::vector<std::pair<std::string, Appointment>> \&appointments,}
+\DoxyCodeLine{90             \textcolor{keyword}{const} std::vector<std::pair<std::string, Patient>> \&patients) \textcolor{keyword}{const};}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92     \textcolor{keywordtype}{void}}
+\DoxyCodeLine{93     ShowAll(\textcolor{keyword}{const} std::vector<std::pair<std::string, Appointment>> \&appointments,}
+\DoxyCodeLine{94             \textcolor{keyword}{const} std::vector<std::pair<std::string, Doctor>> \&doctors) \textcolor{keyword}{const};}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97     \textcolor{keywordtype}{void} ShowAll(\textcolor{keyword}{const} std::vector<std::pair<std::string, Appointment>> \&appointments,}
+\DoxyCodeLine{98                  \textcolor{keyword}{const} std::vector<std::pair<std::string, Patient>> \&patients,}
+\DoxyCodeLine{99                  \textcolor{keyword}{const} std::vector<std::pair<std::string, Doctor>> \&doctors) \textcolor{keyword}{const};}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101 \};}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//REGISTRY\_REGISTRY\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,41 @@
+\hypertarget{menu_item_8h_source}{}\doxysection{menu\+Item.\+h}
+\label{menu_item_8h_source}\index{include/menuItem.h@{include/menuItem.h}}
+\mbox{\hyperlink{menu_item_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef REGISTRY\_MENUITEM\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define REGISTRY\_MENUITEM\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{runnable_8h}{runnable.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <functional>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_menu_item}{MenuItem}} : \mbox{\hyperlink{class_runnable}{Runnable}} \{}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{public}:}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12     \mbox{\hyperlink{class_menu_item_a753f75a0f0eb1c9b10388f1c06de92da}{MenuItem}}(\textcolor{keyword}{const} std::string \&text, \textcolor{keyword}{const} std::function<\textcolor{keywordtype}{void}()> \&function);}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14     \mbox{\hyperlink{class_menu_item_ae081df191fc4e9e84721f5ce9323132f}{MenuItem}}();}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16     \mbox{\hyperlink{class_menu_item_a576c5d9b360a5257327a058c05cf6fa0}{\string~MenuItem}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_item_a2bd49c94f54c3cb405110bfe3ac2c646}{SetText}}(\textcolor{keyword}{const} std::string \&text);}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_item_a5d7ddc36be97cd48bb8b0519e9feb1ac}{SetFunction}}(\textcolor{keyword}{const} std::function<\textcolor{keywordtype}{void}()> \&function);}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     std::string \mbox{\hyperlink{class_menu_item_af4475ec180cb16359047277ec5d21ba0}{GetText}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     std::function<void()> \mbox{\hyperlink{class_menu_item_a6f4863036b6d8a942543f93741bbc17f}{GetFunction}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_menu_item_af3680a22ed30b080077fd80d6773ad48}{Run}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{private}:}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     std::string text\_;}
+\DoxyCodeLine{31     std::function<void()> function\_;}
+\DoxyCodeLine{32 \};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//REGISTRY\_MENUITEM\_H}}
+
+\end{DoxyCode}
