@@ -1,9 +1,9 @@
 # hospital-registry
+You can use [DownGit](https://github.com/MinhasKamal/DownGit) to download this directory.
 
 ## Install
 
 ```
-$ git clone https://github.com/otkisyan/hospital-registry.git
 $ cd hospital-registry
 $ mkdir build
 $ cd build
