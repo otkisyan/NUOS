@@ -15,3 +15,7 @@ These are not all the courses and assignments during semesters - only the coding
   - DJTL - Development Technologies in JVM Languages
   - DMSE - Discrete Mathematics in Software Engineering
   - OOP - Object-Oriented Programming
+
+*This is not the final version of the repository, as I am still studying, the repository will be gradually supplemented over time.*
+
+
