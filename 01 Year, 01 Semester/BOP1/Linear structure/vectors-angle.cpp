@@ -1,4 +1,4 @@
-// Кут між векторами a={2; −4; 4} і b={−3; 2; 6} 
+// Угол между векторами a={2; -4; 4} и b={-3; 2; 6}
 
 #include <iostream>
 #include <cmath>
@@ -6,10 +6,12 @@
 #include <windows.h>
 using namespace std;
 
-int main() {
+int main()
+{
 
 	SetConsoleOutputCP(1251);
-        SetConsoleCP(1251);
+	SetConsoleCP(1251);
+
 	int a1, a2, a3, b1, b2, b3;
 	cout << "Введіть координати a1, a2, a3, b1, b2, b3" << endl;
 	cin >> a1 >> a2 >> a3 >> b1 >> b2 >> b3;
@@ -24,6 +26,8 @@ int main() {
 	cout << "Модуль вектора B: " << vectorB << endl;
 
 	float vectorAngle = (scalar / abs(vectorA * vectorB));
-	cout << "Кут між векторами a = {" << a1 << "," << a2 << "," << a3 << "}" <<" i " << "b = {" << b1 << "," << b2 << "," << b3 << "}" << " = " <<  vectorAngle;
-	
+	cout << "Кут між векторами a = {" << a1 << "," << a2 << "," << a3 << "}"
+		 << " i "
+		 << "b = {" << b1 << "," << b2 << "," << b3 << "}"
+		 << " = " << vectorAngle;
 }

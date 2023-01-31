@@ -6,55 +6,54 @@
 #include <stdlib.h>
 #include <sstream>
 using namespace std;
- 
+
 int main()
 {
     string s = "We study C++ programming language first semester.", word;
-    
-    s.pop_back();
-    stringstream in (s);
 
-    
+    s.pop_back();
+    stringstream in(s);
+
     while (in >> word)
     {
         if (word.find('e') == std::string::npos)
-        cout << word << endl;            
+            cout << word << endl;
     }
 
-    //in - это поток строк, и использование оператора >> "анализирует" строку s 
-    //на основе разделителя, который представляет собой пробел. 
-    //Каждый раз, когда цикл while выполняет итерацию, он помещает следующий набор символов, разделенных пробелом, в слово
-    
- /* - 2 версия
- std::string s = "We study C++ programming language first semester.";
-    s += ' '; //safeguard;
+    // in - это поток строк, и использование оператора >> "анализирует" строку s
+    // на основе разделителя, который представляет собой пробел.
+    // Каждый раз, когда цикл while выполняет итерацию, он помещает следующий набор символов, разделенных пробелом, в слово
 
-    std::string word = "";
-    for (char c : s)
-    {
-        if (c == ' ') //break of word
-        {
-            if (word != "") //word not empty
-            {
-                bool incE = false;
-                for (char c2 : word) //check for e
-                {
-                    if (c2 == 'e') {incE = true; break;}
-                }
+    /* - 2 версия
+    std::string s = "We study C++ programming language first semester.";
+       s += ' '; //safeguard;
 
-                if (!incE)
-                {
-                    std::cout << word << " ";
-                }
+       std::string word = "";
+       for (char c : s)
+       {
+           if (c == ' ') //break of word
+           {
+               if (word != "") //word not empty
+               {
+                   bool incE = false;
+                   for (char c2 : word) //check for e
+                   {
+                       if (c2 == 'e') {incE = true; break;}
+                   }
 
-                word = "";
-            }
-        }
-        else {word = word + c;}
-    }
+                   if (!incE)
+                   {
+                       std::cout << word << " ";
+                   }
 
-*/
+                   word = "";
+               }
+           }
+           else {word = word + c;}
+       }
 
-system("pause");
-return 0;
+   */
+
+    system("pause");
+    return 0;
 }

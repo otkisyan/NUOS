@@ -1,4 +1,4 @@
-// Подсчитать количество цифр во введенном пользователем числе, их сумму и установить цифры в обратном порядке. 
+// Подсчитать количество цифр во введенном пользователем числе, их сумму и установить цифры в обратном порядке.
 // Предусмотреть возможность повторения действия пользователя несколько раз.
 
 #include <iostream>
@@ -10,84 +10,81 @@ using namespace std;
 
 int Amount(int x);
 int Sum(int x);
-int Reverse (int x);
+int Reverse(int x);
 
-int main(){
- 
-SetConsoleCP(65001);
-SetConsoleOutputCP(65001);
-
-int x = 0, n = 0;
-
-do
+int main()
 {
-    int choice;
-    cout << "Введите число: " << endl;
-    cin >> x;
-    n = 1;
 
-    Amount(x);
-    Sum(x);
-    Reverse(x);
-    
-    cout << "Желаете продолжить работу? 1 - да, 2 - нет" << endl;
-    cin >> choice;
+    SetConsoleCP(65001);
+    SetConsoleOutputCP(65001);
 
-    switch (choice)
+    int x = 0, n = 0;
+
+    do
     {
-    case 1:
-        n = 0;
-        break;
-    
-    default:
-        break;
-    }
-    
+        int choice;
+        cout << "Введите число: " << endl;
+        cin >> x;
+        n = 1;
 
-} while (n == 0);
+        Amount(x);
+        Sum(x);
+        Reverse(x);
 
- system("pause");
+        cout << "Желаете продолжить работу? 1 - да, 2 - нет" << endl;
+        cin >> choice;
 
+        switch (choice)
+        {
+        case 1:
+            n = 0;
+            break;
+
+        default:
+            break;
+        }
+
+    } while (n == 0);
+
+    system("pause");
 }
 
+int Amount(int x)
+{
 
-int Amount (int x){
+    int digits = 0;
 
-int digits = 0;
-
-while (x > 0)
+    while (x > 0)
     {
         x /= 10;
         digits++;
-       
     }
 
-  cout << "Количество цифр в числе: " << digits << endl;
-
+    cout << "Количество цифр в числе: " << digits << endl;
 }
 
-int Sum (int x){
+int Sum(int x)
+{
 
     int sum = 0;
-     while (x > 0)
+    while (x > 0)
     {
         sum += x % 10;
         x /= 10;
     }
-     cout << "Сумма цифр числа: " << sum << endl;
+    cout << "Сумма цифр числа: " << sum << endl;
 }
 
-int Reverse (int x){
+int Reverse(int x)
+{
 
     int reverse = 0;
-    
 
-    while (x > 0) 
+    while (x > 0)
     {
-        
+
         reverse = reverse * 10 + x % 10;
         x /= 10;
     }
-    cout << "Обратная запись числа: " << reverse <<  endl;
-
+    cout << "Обратная запись числа: " << reverse << endl;
 }
