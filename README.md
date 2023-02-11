@@ -1,8 +1,10 @@
 # NUOS Exercises, Assignments and Projects
+
 Here you can find my coding activity during my university studies. The documentation of projects is not included here.
 These are not all the courses and assignments during semesters - only the coding ones.
 
 ### The folder structure is as follows:
+
 - 01 Year, 01 Semester
   - BOP1 - Basics of Programming 1
   - BSE1 - Basics of Software Engineering 1
@@ -15,7 +17,7 @@ These are not all the courses and assignments during semesters - only the coding
   - DJTL - Development Technologies in JVM Languages
   - DMSE - Discrete Mathematics in Software Engineering
   - OOP - Object-Oriented Programming
+- 02 Year, 04 Semester
+  - SDTOMP - Software Development Technologies on Modern Platforms
 
-*This is not the final version of the repository, as I am still studying, the repository will be gradually supplemented over time.*
-
-
+_This is not the final version of the repository, as I am still studying, the repository will be gradually supplemented over time._
