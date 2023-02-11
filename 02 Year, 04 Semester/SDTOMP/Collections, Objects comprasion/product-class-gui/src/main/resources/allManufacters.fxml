@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AllManufactersController">
+   <children>
+      <TableView fx:id="table" layoutX="190.0" layoutY="27.0" prefHeight="401.0" prefWidth="221.0">
+         <columns>
+            <TableColumn fx:id="manufacterColumn" prefWidth="219.0" text="Виробник" />
+         </columns>
+      </TableView>
+      <Button fx:id="backHome" defaultButton="true" layoutX="233.0" layoutY="451.0" mnemonicParsing="false" text="На головну сторінку" />
+   </children>
+</AnchorPane>

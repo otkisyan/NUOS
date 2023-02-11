@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.PrimaryController">
+   <children>
+      <Button fx:id="addProduct" alignment="CENTER" layoutX="240.0" layoutY="52.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="144.0" text="Додати товар" textAlignment="CENTER" />
+      <Button fx:id="removeProduct" alignment="CENTER" layoutX="240.0" layoutY="92.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="144.0" text="Видалити товар" textAlignment="CENTER" />
+      <Button fx:id="allProducts" alignment="CENTER" layoutX="240.0" layoutY="130.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="144.0" text="Список всіх товарів" textAlignment="CENTER" />
+      <Button fx:id="nameStoragePeriodDescending" alignment="CENTER" layoutX="61.0" layoutY="217.0" mnemonicParsing="false" text="Список товарів для заданого найменування в порядку спадання терміну зберігання" textAlignment="CENTER" />
+      <Button fx:id="nameNotExceedPrice" alignment="CENTER" layoutX="61.0" layoutY="258.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="501.0" text="Список товарів для заданого найменування, ціна яких не перевищує задану" textAlignment="CENTER" />
+      <Button fx:id="allStoragePeriodLongerThan" alignment="CENTER" layoutX="61.0" layoutY="297.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="501.0" text="Список товарів, термін зберігання яких більше заданого" textAlignment="CENTER" />
+      <Button fx:id="allPriceAscending" alignment="CENTER" layoutX="61.0" layoutY="337.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="501.0" text="Список товарів, впорядкований за зростанням вартості (кількість * ціна)" textAlignment="CENTER" />
+      <Button fx:id="allManufacters" alignment="CENTER" layoutX="61.0" layoutY="377.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="501.0" text="Список виробників продуктів, зареєстрованих в програмі" textAlignment="CENTER" />
+      <Button fx:id="productsOfEachManufacter" alignment="CENTER" layoutX="61.0" layoutY="415.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="501.0" text="Список продуктів для кожного виробника" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

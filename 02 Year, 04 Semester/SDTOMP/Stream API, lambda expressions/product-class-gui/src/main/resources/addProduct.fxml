@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AddProductController">
+   <children>
+      <TextField fx:id="name" layoutX="221.0" layoutY="41.0" />
+      <Label alignment="CENTER" layoutX="271.0" layoutY="14.0" prefHeight="17.0" prefWidth="55.0" text="Назва" />
+      <TextField fx:id="manufacter" layoutX="219.0" layoutY="115.0" />
+      <Label alignment="CENTER" layoutX="253.0" layoutY="88.0" prefHeight="17.0" prefWidth="92.0" text="Виробник" />
+      <TextField fx:id="price" layoutX="219.0" layoutY="182.0" />
+      <Label alignment="CENTER" layoutX="253.0" layoutY="155.0" prefHeight="17.0" prefWidth="92.0" text="Ціна" />
+      <TextField fx:id="storageDay" alignment="CENTER" layoutX="204.0" layoutY="250.0" prefHeight="26.0" prefWidth="55.0" promptText="День" />
+      <Label alignment="CENTER" layoutX="230.0" layoutY="222.0" prefHeight="17.0" prefWidth="138.0" text="Термін зберігання" />
+      <TextField fx:id="amount" layoutX="221.0" layoutY="318.0" />
+      <Label alignment="CENTER" layoutX="230.0" layoutY="293.0" prefHeight="17.0" prefWidth="138.0" text="Кількість" />
+      <Button fx:id="addProduct" alignment="CENTER" layoutX="227.0" layoutY="384.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="144.0" text="Додати продукт" textAlignment="CENTER" />
+      <Button fx:id="home" alignment="CENTER" defaultButton="true" layoutX="227.0" layoutY="441.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="144.0" text="На головну сторінку" textAlignment="CENTER" />
+      <TextField fx:id="storageMonth" alignment="CENTER" layoutX="281.0" layoutY="250.0" prefHeight="26.0" prefWidth="55.0" promptText="Місяць" />
+      <TextField fx:id="storageYear" alignment="CENTER" layoutX="353.0" layoutY="250.0" prefHeight="26.0" prefWidth="55.0" promptText="Рік" />
+   </children>
+</AnchorPane>
