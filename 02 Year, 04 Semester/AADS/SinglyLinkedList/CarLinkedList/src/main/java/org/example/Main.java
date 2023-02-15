@@ -126,15 +126,15 @@ public class Main {
 
                     System.out.print("Enter the mark of the car: ");
                     String mark = input.nextLine();
-                    List<Car> carsofMark = carLinkedList.getCarsOfMark(mark);
-                    System.out.println(carsofMark.toString());
+                    CarLinkedList carsOfMark = carLinkedList.getCarsOfMark(mark);
+                    carsOfMark.print();
                 }
                 case 8 -> {
 
                     System.out.print("Enter the char of the serial number: ");
                     char serialNumber = input.next().charAt(0);
-                    List<Car> carsOfSerialNumber = carLinkedList.getCarsWithSerialDigit(serialNumber);
-                    System.out.println(carsOfSerialNumber.toString());
+                    CarLinkedList carsOfSerialNumber = carLinkedList.getCarsWithSerialDigit(serialNumber);
+                    carsOfSerialNumber.print();
                 }
 
                 case 9 -> {
@@ -145,8 +145,8 @@ public class Main {
                     System.out.print("Enter the years of exploitation: ");
                     int yearsOfExploitation = input.nextInt();
 
-                    List<Car> carsWithEngineDisplacementAndExploitation = carLinkedList.getCarsWithDisplacementAndExploitation(engineDisplacement, yearsOfExploitation);
-                    System.out.println(carsWithEngineDisplacementAndExploitation.toString());
+                    CarLinkedList carsWithEngineDisplacementAndExploitation = carLinkedList.getCarsWithDisplacementAndExploitation(engineDisplacement, yearsOfExploitation);
+                    carsWithEngineDisplacementAndExploitation.print();
                 }
 
                 case 10 -> {

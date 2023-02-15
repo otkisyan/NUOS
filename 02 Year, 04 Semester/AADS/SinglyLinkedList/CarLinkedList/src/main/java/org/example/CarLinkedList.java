@@ -1,8 +1,6 @@
 package org.example;
 
 import java.time.Year;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.NoSuchElementException;
 
 public class CarLinkedList {
@@ -285,21 +283,43 @@ public class CarLinkedList {
     }
 
     /**
+     * Проверяет содержит ли список заданный объект <code>Car</code>
+     *
+     * @param car объект для поиска
+     * @return true, если список содержит заданный объект, в противном случае false
+     */
+    public boolean contains(Car car) {
+
+        CarNode current = head;
+
+        while (current != null) {
+
+            if (current.car.equals(car)) {
+
+                return true;
+            }
+            current = current.next;
+        }
+
+        return false;
+    }
+
+    /**
      * Возвращает список автомобилей с определенной маркой
      *
      * @param mark марка для поиска
      * @return список автомобилей с определенной маркой
      */
-    public List<Car> getCarsOfMark(String mark) {
+    public CarLinkedList getCarsOfMark(String mark) {
 
-        List<Car> carsOfMark = new ArrayList<>();
+        CarLinkedList carsOfMark = new CarLinkedList();
         CarNode current = head;
 
         while (current != null) {
 
             if (current.car.getMark().equals(mark)) {
 
-                carsOfMark.add(current.car);
+                carsOfMark.addLastCar(current.car);
             }
 
             current = current.next;
@@ -314,16 +334,16 @@ public class CarLinkedList {
      * @param digit цифра для поиска в серийном номере
      * @return список автомобилей с серийным номером, содержащим указанную цифру
      */
-    public List<Car> getCarsWithSerialDigit(char digit) {
+    public CarLinkedList getCarsWithSerialDigit(char digit) {
 
-        List<Car> carsWithSerialDigit = new ArrayList<>();
+        CarLinkedList carsWithSerialDigit = new CarLinkedList();
         CarNode current = head;
 
         while (current != null) {
 
             if (current.car.getSerialNumber().indexOf(digit) != -1) {
 
-                carsWithSerialDigit.add(current.car);
+                carsWithSerialDigit.addLastCar(current.car);
             }
 
             current = current.next;
@@ -339,9 +359,9 @@ public class CarLinkedList {
      * @param yearsOfExploitation лет в эксплуатации
      * @return список автомобилей с объемом двигателя больше определенного и эксплуатацией меньше определенных лет
      */
-    public List<Car> getCarsWithDisplacementAndExploitation(double engineDisplacement, int yearsOfExploitation) {
+    public CarLinkedList getCarsWithDisplacementAndExploitation(double engineDisplacement, int yearsOfExploitation) {
 
-        List<Car> carsWithDisplacementAndExploitation = new ArrayList<>();
+        CarLinkedList carsWithDisplacementAndExploitation = new CarLinkedList();
         CarNode current = head;
         int currentYear = Year.now().getValue();
 
@@ -350,7 +370,7 @@ public class CarLinkedList {
             if (current.car.getEngineDisplacement() > engineDisplacement
                     && (currentYear - current.car.getYearOfManufacture()) < yearsOfExploitation) {
 
-                carsWithDisplacementAndExploitation.add(current.car);
+                carsWithDisplacementAndExploitation.addLastCar(current.car);
             }
 
             current = current.next;

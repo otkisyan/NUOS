@@ -3,8 +3,6 @@ package org.example;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class CarLinkedListTest {
@@ -107,7 +105,7 @@ class CarLinkedListTest {
         Car car3 = new Car("Honda", "234567890", 1700, 2020);
         carLinkedList.addLastCar(car1);
         carLinkedList.addLastCar(car2);
-        List<Car> carsOfMark = carLinkedList.getCarsOfMark("Toyota");
+        CarLinkedList carsOfMark = carLinkedList.getCarsOfMark("Toyota");
         assertTrue(carsOfMark.contains(car1));
         assertTrue(carsOfMark.contains(car2));
         assertFalse(carsOfMark.contains(car3));
@@ -124,13 +122,13 @@ class CarLinkedListTest {
         carLinkedList.addLastCar(car2);
         carLinkedList.addLastCar(car3);
         carLinkedList.addLastCar(car4);
-        List<Car> carsOfMark = carLinkedList.getCarsWithSerialDigit('0');
-        assertTrue(carsOfMark.contains(car1));
-        assertTrue(carsOfMark.contains(car4));
+        CarLinkedList carsWithSerialDigit = carLinkedList.getCarsWithSerialDigit('0');
+        assertTrue(carsWithSerialDigit.contains(car1));
+        assertTrue(carsWithSerialDigit.contains(car4));
     }
 
     @Test
-    void getCarsWithDisplacementAndExploitation(){
+    void getCarsWithDisplacementAndExploitation() {
 
         Car car1 = new Car("Toyota", "123456789", 1500, 2014);
         Car car2 = new Car("Honda", "234567894", 1500, 2017);
@@ -141,7 +139,7 @@ class CarLinkedListTest {
         double engineDisplacement = 1400;
         int yearsOfExploitation = 10;
 
-        List<Car> carsWithEngineDisplacementAndExploitation = carLinkedList.getCarsWithDisplacementAndExploitation(engineDisplacement, yearsOfExploitation);
+        CarLinkedList carsWithEngineDisplacementAndExploitation = carLinkedList.getCarsWithDisplacementAndExploitation(engineDisplacement, yearsOfExploitation);
         assertTrue(carsWithEngineDisplacementAndExploitation.contains(car1));
         assertTrue(carsWithEngineDisplacementAndExploitation.contains(car2));
         assertFalse(carsWithEngineDisplacementAndExploitation.contains(car3));
