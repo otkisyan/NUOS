@@ -19,7 +19,7 @@ These are not all the courses and assignments during semesters - only the coding
   - OOP - Object-Oriented Programming
 - 02 Year, 04 Semester
   - SDTOMP - Software Development Technologies on Modern Platforms
-  - AADS - Algorithms and data structures
+  - AADS - Algorithms and Data Structures
   - PADS - Program and Data Security
 
 _This is not the final version of the repository, as I am still studying, the repository will be gradually supplemented over time._
