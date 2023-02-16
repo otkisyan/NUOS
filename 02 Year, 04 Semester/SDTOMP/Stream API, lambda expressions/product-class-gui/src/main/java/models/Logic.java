@@ -106,7 +106,7 @@ public class Logic {
 
         return list.stream()
                 .sorted(Comparator.comparingDouble(Product::getCost)
-                        .thenComparingDouble(Product::getPrice).reversed())
+                        .thenComparingDouble(product -> -product.getPrice()))
                 .collect(Collectors.toList());
     }
 
