@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.RemoveProductController">
+   <children>
+      <TableView fx:id="table" layoutX="47.0" layoutY="17.0" prefHeight="334.0" prefWidth="507.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="41.0" text="id" />
+          <TableColumn fx:id="nameColumn" prefWidth="109.0" text="Назва" />
+            <TableColumn fx:id="manufacterColumn" prefWidth="90.0" text="Виробник" />
+            <TableColumn fx:id="priceColumn" prefWidth="66.0" text="Ціна" />
+            <TableColumn fx:id="storageColumn" prefWidth="84.0" text="Час зберігання" />
+            <TableColumn fx:id="amountColumn" prefWidth="71.0" text="Кількість" />
+        </columns>
+      </TableView>
+      <Button fx:id="deleteButton" layoutX="263.0" layoutY="376.0" mnemonicParsing="false" text="Видалити" />
+      <Button fx:id="backHome" defaultButton="true" layoutX="230.0" layoutY="439.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" text="На головну сторінку" />
+   </children>
+</AnchorPane>

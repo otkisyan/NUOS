@@ -13,14 +13,14 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        CarLinkedList carLinkedList = new CarLinkedList();
+        CarSinglyLinkedList carSinglyLinkedList = new CarSinglyLinkedList();
         List<Car> cars = new ArrayList<>(Arrays.asList(
 
-                new Car("Toyota", "123456789", 1500, 2019),
+                new Car("Toyota", "12345678", 1500, 2019),
                 new Car("Honda", "234567890", 1700, 2020),
-                new Car("Nissan", "345678901", 1600, 2018),
+                new Car("Nissan", "34567801", 1600, 2018),
                 new Car("Mazda", "456789012", 1700, 2017),
-                new Car("Ford", "567890123", 1600, 2020),
+                new Car("Ford", "56780123", 1600, 2020),
                 new Car("Chevrolet", "678901234", 1500, 2019),
                 new Car("Kia", "789012345", 1700, 2018),
                 new Car("Hyundai", "890123456", 1600, 2017),
@@ -32,7 +32,7 @@ public class Main {
 
         for (Car car : cars) {
 
-            carLinkedList.addLastCar(car);
+            carSinglyLinkedList.addLastCar(car);
         }
 
         Scanner input = new Scanner(System.in);
@@ -73,7 +73,7 @@ public class Main {
                     int year = input.nextInt();
                     Car car = new Car(mark, serialNumber, engineDisplacement, year);
 
-                    carLinkedList.addFirstCar(car);
+                    carSinglyLinkedList.addFirstCar(car);
                 }
                 case 2 -> {
 
@@ -88,7 +88,7 @@ public class Main {
                     int year = input.nextInt();
                     Car car = new Car(mark, serialNumber, engineDisplacement, year);
 
-                    carLinkedList.addLastCar(car);
+                    carSinglyLinkedList.addLastCar(car);
                 }
                 case 3 -> {
 
@@ -106,34 +106,34 @@ public class Main {
                     System.out.println("Enter index to insert car");
                     int index = input.nextInt();
 
-                    carLinkedList.insertCarAt(index, car);
+                    carSinglyLinkedList.insertCarAt(index, car);
                 }
                 case 4 -> {
 
-                    carLinkedList.removeFirstCar();
+                    carSinglyLinkedList.removeFirstCar();
                 }
                 case 5 -> {
 
-                    carLinkedList.removeLastCar();
+                    carSinglyLinkedList.removeLastCar();
                 }
                 case 6 -> {
 
                     System.out.print("Enter the index of the car to delete: ");
                     int index = input.nextInt();
-                    carLinkedList.removeCarAt(index);
+                    carSinglyLinkedList.removeCarAt(index);
                 }
                 case 7 -> {
 
                     System.out.print("Enter the mark of the car: ");
                     String mark = input.nextLine();
-                    CarLinkedList carsOfMark = carLinkedList.getCarsOfMark(mark);
+                    CarSinglyLinkedList carsOfMark = carSinglyLinkedList.getCarsOfMark(mark);
                     carsOfMark.print();
                 }
                 case 8 -> {
 
                     System.out.print("Enter the char of the serial number: ");
                     char serialNumber = input.next().charAt(0);
-                    CarLinkedList carsOfSerialNumber = carLinkedList.getCarsWithSerialDigit(serialNumber);
+                    CarSinglyLinkedList carsOfSerialNumber = carSinglyLinkedList.getCarsWithSerialDigit(serialNumber);
                     carsOfSerialNumber.print();
                 }
 
@@ -145,13 +145,13 @@ public class Main {
                     System.out.print("Enter the years of exploitation: ");
                     int yearsOfExploitation = input.nextInt();
 
-                    CarLinkedList carsWithEngineDisplacementAndExploitation = carLinkedList.getCarsWithDisplacementAndExploitation(engineDisplacement, yearsOfExploitation);
+                    CarSinglyLinkedList carsWithEngineDisplacementAndExploitation = carSinglyLinkedList.getCarsWithDisplacementAndExploitation(engineDisplacement, yearsOfExploitation);
                     carsWithEngineDisplacementAndExploitation.print();
                 }
 
                 case 10 -> {
 
-                    carLinkedList.print();
+                    carSinglyLinkedList.print();
                 }
 
                 case 11 -> {

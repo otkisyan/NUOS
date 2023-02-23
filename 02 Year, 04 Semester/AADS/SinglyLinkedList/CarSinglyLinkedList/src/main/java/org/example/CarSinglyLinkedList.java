@@ -3,7 +3,7 @@ package org.example;
 import java.time.Year;
 import java.util.NoSuchElementException;
 
-public class CarLinkedList {
+public class CarSinglyLinkedList {
 
     private static class CarNode {
 
@@ -29,9 +29,10 @@ public class CarLinkedList {
     private CarNode head;
     private int size;
 
-    public CarLinkedList() {
+    public CarSinglyLinkedList() {
 
         this.head = null;
+        this.size = 0;
     }
 
     public int getSize() {
@@ -96,11 +97,11 @@ public class CarLinkedList {
      *
      * @param car   элемент для добавления
      * @param index индекс, в который должен быть вставлен элемент
-     * @throws IndexOutOfBoundsException если индекс вне диапазона (index < 0 || index >= size)
+     * @throws IndexOutOfBoundsException если индекс вне диапазона (index < 0 || index > size)
      */
     public void insertCarAt(int index, Car car) {
 
-        if (index < 0 || index >= size) {
+        if (index < 0 || index > size) {
 
             throw new IndexOutOfBoundsException();
         }
@@ -109,6 +110,12 @@ public class CarLinkedList {
         if (index == 0) {
 
             addFirstCar(car);
+            return;
+        }
+
+        if (index == size) {
+
+            addLastCar(car);
             return;
         }
 
@@ -298,6 +305,7 @@ public class CarLinkedList {
 
                 return true;
             }
+
             current = current.next;
         }
 
@@ -310,9 +318,9 @@ public class CarLinkedList {
      * @param mark марка для поиска
      * @return список автомобилей с определенной маркой
      */
-    public CarLinkedList getCarsOfMark(String mark) {
+    public CarSinglyLinkedList getCarsOfMark(String mark) {
 
-        CarLinkedList carsOfMark = new CarLinkedList();
+        CarSinglyLinkedList carsOfMark = new CarSinglyLinkedList();
         CarNode current = head;
 
         while (current != null) {
@@ -334,9 +342,9 @@ public class CarLinkedList {
      * @param digit цифра для поиска в серийном номере
      * @return список автомобилей с серийным номером, содержащим указанную цифру
      */
-    public CarLinkedList getCarsWithSerialDigit(char digit) {
+    public CarSinglyLinkedList getCarsWithSerialDigit(char digit) {
 
-        CarLinkedList carsWithSerialDigit = new CarLinkedList();
+        CarSinglyLinkedList carsWithSerialDigit = new CarSinglyLinkedList();
         CarNode current = head;
 
         while (current != null) {
@@ -359,9 +367,9 @@ public class CarLinkedList {
      * @param yearsOfExploitation лет в эксплуатации
      * @return список автомобилей с объемом двигателя больше определенного и эксплуатацией меньше определенных лет
      */
-    public CarLinkedList getCarsWithDisplacementAndExploitation(double engineDisplacement, int yearsOfExploitation) {
+    public CarSinglyLinkedList getCarsWithDisplacementAndExploitation(double engineDisplacement, int yearsOfExploitation) {
 
-        CarLinkedList carsWithDisplacementAndExploitation = new CarLinkedList();
+        CarSinglyLinkedList carsWithDisplacementAndExploitation = new CarSinglyLinkedList();
         CarNode current = head;
         int currentYear = Year.now().getValue();
 
