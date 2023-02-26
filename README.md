@@ -1,4 +1,4 @@
-# 📚 NUOS Exercises, Assignments and Projects
+# NUOS Exercises, Assignments and Projects
 
 Here you can find my coding activity during my university studies. The documentation of projects is not included here.
 These are not all the courses and assignments during semesters - only the coding ones.
