@@ -70,8 +70,7 @@ void File::WriteFile(vector<pair<string, Appointment>> appointments) {
 
 vector<pair<string, Patient>> File::ReadFile(vector<pair<string, Patient>> patients) {
 
-    if (!__fs::filesystem::exists(kPatientsFilePath)) {
-
+    if (filesystem::exists(kPatientsFilePath)){
         return patients;
     }
 
@@ -85,9 +84,6 @@ vector<pair<string, Patient>> File::ReadFile(vector<pair<string, Patient>> patie
         return patients;
     }
 
-    if (patientsFile) {
-
-    }
 
     // Читаем количество пациентов
     int numberOfPatients = 0;
@@ -109,7 +105,7 @@ vector<pair<string, Patient>> File::ReadFile(vector<pair<string, Patient>> patie
 
 vector<pair<string, Doctor>> File::ReadFile(vector<pair<string, Doctor>> doctors) {
 
-    if (!__fs::filesystem::exists(kDoctorsFilePath)) {
+    if (filesystem::exists(kDoctorsFilePath)) {
 
         return doctors;
     }
@@ -145,7 +141,7 @@ vector<pair<string, Doctor>> File::ReadFile(vector<pair<string, Doctor>> doctors
 
 vector<pair<string, Appointment>> File::ReadFile(vector<pair<string, Appointment>> appointments) {
 
-    if (!__fs::filesystem::exists(kAppointmentsFilePath)) {
+    if (filesystem::exists(kAppointmentsFilePath)) {
 
         return appointments;
     }

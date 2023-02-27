@@ -1,55 +1,49 @@
 #include "../include/registry.h"
 #include "../include/idgenerator.h"
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
-Registry::Registry() : patients_(), doctors_(), appointments_() {
-
-}
+Registry::Registry() : patients_(), doctors_(), appointments_() {}
 
 Registry::Registry(const vector<pair<string, Patient>> &patients,
+
                    const vector<pair<string, Doctor>> &doctors,
-                   const vector<pair<string, Appointment>> &appointments) : patients_(patients),
-                                                                            doctors_(doctors),
-                                                                            appointments_(appointments) {
+                   const vector<pair<string, Appointment>> &appointments)
+        : patients_(patients), doctors_(doctors), appointments_(appointments) {}
 
-}
-
-Registry::~Registry() {
-
-}
+Registry::~Registry() {}
 
 vector<pair<string, Patient>> Registry::GetPatients() const {
 
     return patients_;
 }
 
-vector<pair<string, Doctor>> Registry::GetDoctors() const {
-
-    return doctors_;
-}
+vector<pair<string, Doctor>> Registry::GetDoctors() const { return doctors_; }
 
 vector<pair<string, Appointment>> Registry::GetAppointments() const {
 
     return appointments_;
 }
 
-void Registry::SetPatients(const std::vector<std::pair<std::string, Patient>> &patients) {
+void Registry::SetPatients(
+        const std::vector<std::pair<std::string, Patient>> &patients) {
 
     patients_ = patients;
 }
 
-void Registry::SetDoctors(const std::vector<std::pair<std::string, Doctor>> &doctors) {
+void Registry::SetDoctors(
+        const std::vector<std::pair<std::string, Doctor>> &doctors) {
 
     doctors_ = doctors;
 }
 
-void Registry::SetAppointments(const vector<pair<string, Appointment>> &appointments) {
+void Registry::SetAppointments(
+        const vector<pair<string, Appointment>> &appointments) {
 
     appointments_ = appointments;
 }
-
 
 void Registry::Add(const Doctor &doctor) {
 
@@ -61,7 +55,9 @@ void Registry::Add(const Patient &patient) {
     patients_.emplace_back(IdGenerator::Generate(), patient);
 }
 
-void Registry::ScheduleAppointment(const DoctorId &doctorId, const PatientId &patientId, const Date &date) {
+void Registry::ScheduleAppointment(const DoctorId &doctorId,
+                                   const PatientId &patientId,
+                                   const Date &date) {
 
     auto itDoctor = Find(doctorId);
 
@@ -77,11 +73,14 @@ void Registry::ScheduleAppointment(const DoctorId &doctorId, const PatientId &pa
         throw invalid_argument("Пацієнта з таким кодом не існує");
     }
 
-    // emplace_back - вместо того, чтобы принимать value_type, он принимает вариативный список аргументов, так что это означает,
-    // что теперь вы можете идеально пересылать аргументы и напрямую создавать объект в контейнере без временного хранения.
-    appointments_.emplace_back(IdGenerator::Generate(), Appointment(itPatient->first, itDoctor->first, date));
+    // emplace_back - вместо того, чтобы принимать value_type, он принимает
+    // вариативный список аргументов, так что это означает, что теперь вы можете
+    // идеально пересылать аргументы и напрямую создавать объект в контейнере без
+    // временного хранения.
+    appointments_.emplace_back(
+            IdGenerator::Generate(),
+            Appointment(itPatient->first, itDoctor->first, date));
 }
-
 
 void Registry::Remove(const PatientId &patientId) {
 
@@ -99,15 +98,13 @@ void Registry::Remove(const PatientId &patientId) {
     // erase - удаляет из вектора один элемент (позицию), либо диапазон элементов.
     appointments_.erase(
 
-            // remove_if - элементы удовлетворяющие условию записывает в конец вектора, и возвращает итератор на начало элементов на удаление
+            // remove_if - элементы удовлетворяющие условию записывает в конец
+            // вектора, и возвращает итератор на начало элементов на удаление
             remove_if(appointments_.begin(), appointments_.end(),
                       [&patientKey](const pair<string, Appointment> &appointment) {
-
                           return appointment.second.GetPatientKey() == patientKey;
-
-                      }), appointments_.end());
-
-
+                      }),
+            appointments_.end());
 }
 
 void Registry::Remove(const DoctorId &doctorId) {
@@ -126,12 +123,11 @@ void Registry::Remove(const DoctorId &doctorId) {
 
             remove_if(appointments_.begin(), appointments_.end(),
                       [&doctorKey](const pair<string, Appointment> &appointment) {
-
                           return appointment.second.GetDoctorKey() == doctorKey;
-
-                      }), appointments_.end());
-
+                      }),
+            appointments_.end());
 }
+
 
 void Registry::Remove(const AppointmentId &appointmentId) {
 
@@ -145,8 +141,8 @@ void Registry::Remove(const AppointmentId &appointmentId) {
     appointments_.erase(it);
 }
 
-
-vector<pair<string, Appointment>> Registry::FindAppointments(const DoctorId &doctorId) {
+vector<pair<string, Appointment>>
+Registry::FindAppointments(const DoctorId &doctorId) {
 
     auto it = Find(doctorId);
 
@@ -158,16 +154,17 @@ vector<pair<string, Appointment>> Registry::FindAppointments(const DoctorId &doc
     vector<pair<string, Appointment>> doctorAppointments;
     string doctorKey = it->first;
 
-    copy_if(appointments_.begin(), appointments_.end(), back_inserter(doctorAppointments),
+    copy_if(appointments_.begin(), appointments_.end(),
+            back_inserter(doctorAppointments),
             [&doctorKey](const pair<string, Appointment> &appointment) {
-
                 return appointment.second.GetDoctorKey() == doctorKey;
             });
 
     return doctorAppointments;
 }
 
-vector<pair<string, Appointment>> Registry::FindAppointments(const PatientId &patientId) {
+vector<pair<string, Appointment>>
+Registry::FindAppointments(const PatientId &patientId) {
 
     auto it = Find(patientId);
 
@@ -179,48 +176,49 @@ vector<pair<string, Appointment>> Registry::FindAppointments(const PatientId &pa
     vector<pair<string, Appointment>> patientAppointments;
     string patientKey = it->first;
 
-    copy_if(appointments_.begin(), appointments_.end(), back_inserter(patientAppointments),
+    copy_if(appointments_.begin(), appointments_.end(),
+            back_inserter(patientAppointments),
             [&patientKey](const pair<string, Appointment> &appointment) {
-
                 return appointment.second.GetPatientKey() == patientKey;
             });
-
 
     return patientAppointments;
 }
 
-vector<pair<string, Patient>>::iterator Registry::Find(const PatientId &patientId) {
+vector<pair<string, Patient>>::iterator
+Registry::Find(const PatientId &patientId) {
 
-    // find_if - возвращает итератор к первому элементу в диапазоне [first, last], для которого предикат возвращает true.
-    // Если такой элемент не найден, функция возвращает last.
+    // find_if - возвращает итератор к первому элементу в диапазоне [first, last],
+    // для которого предикат возвращает true. Если такой элемент не найден,
+    // функция возвращает last.
 
     auto it = find_if(patients_.begin(), patients_.end(),
                       [&patientId](const pair<string, Patient> &patient) {
-
                           return patient.second.GetId() == patientId;
                       });
 
     return it;
 }
 
-vector<pair<string, Doctor>>::iterator Registry::Find(const DoctorId &doctorId) {
+vector<pair<string, Doctor>>::iterator
+Registry::Find(const DoctorId &doctorId) {
 
     auto it = find_if(doctors_.begin(), doctors_.end(),
                       [&doctorId](const pair<string, Doctor> &doctor) {
-
                           return doctor.second.GetId() == doctorId;
                       });
 
     return it;
 }
 
-vector<pair<string, Appointment>>::iterator Registry::Find(const AppointmentId &appointmentId) {
+vector<pair<string, Appointment>>::iterator
+Registry::Find(const AppointmentId &appointmentId) {
 
-    auto it = find_if(appointments_.begin(), appointments_.end(),
-                      [&appointmentId](const pair<string, Appointment> &appointment) {
-
-                          return appointment.second.GetId() == appointmentId;
-                      });
+    auto it =
+            find_if(appointments_.begin(), appointments_.end(),
+                    [&appointmentId](const pair<string, Appointment> &appointment) {
+                        return appointment.second.GetId() == appointmentId;
+                    });
 
     return it;
 }
@@ -240,13 +238,11 @@ void Registry::ShowAll(const vector<pair<string, Doctor>> &doctors) const {
 
         doctors[i].second.Show();
         cout << endl;
-
     }
 }
 
 void Registry::ShowAll(const vector<pair<string, Appointment>> &appointments,
                        const vector<pair<string, Patient>> &patients) const {
-
 
     for (int i = 0; i < appointments.size(); i++) {
 
@@ -256,10 +252,11 @@ void Registry::ShowAll(const vector<pair<string, Appointment>> &appointments,
 
         string patientKey = appointments[i].second.GetPatientKey();
 
-        auto patientIt = find_if(patients.begin(), patients.end(), [&patientKey](const pair<string, Patient> &patient) {
-
-            return patient.first == patientKey;
-        });
+        auto patientIt =
+                find_if(patients.begin(), patients.end(),
+                        [&patientKey](const pair<string, Patient> &patient) {
+                            return patient.first == patientKey;
+                        });
 
         patientIt->second.Show();
 
@@ -269,9 +266,7 @@ void Registry::ShowAll(const vector<pair<string, Appointment>> &appointments,
         cout << "Дата прийому: ";
         date.Show();
         cout << endl;
-
     }
-
 }
 
 void Registry::ShowAll(const vector<pair<string, Appointment>> &appointments,
@@ -285,10 +280,10 @@ void Registry::ShowAll(const vector<pair<string, Appointment>> &appointments,
 
         string doctorKey = appointments[i].second.GetDoctorKey();
 
-        auto doctorIt = find_if(doctors.begin(), doctors.end(), [&doctorKey](const pair<string, Doctor> &doctor) {
-
-            return doctor.first == doctorKey;
-        });
+        auto doctorIt = find_if(doctors.begin(), doctors.end(),
+                                [&doctorKey](const pair<string, Doctor> &doctor) {
+                                    return doctor.first == doctorKey;
+                                });
 
         doctorIt->second.Show();
 
@@ -298,10 +293,8 @@ void Registry::ShowAll(const vector<pair<string, Appointment>> &appointments,
         cout << "Дата прийому: ";
         date.Show();
         cout << endl;
-
     }
 }
-
 
 void Registry::ShowAll(const vector<pair<string, Appointment>> &appointments,
                        const vector<pair<string, Patient>> &patients,
@@ -315,21 +308,21 @@ void Registry::ShowAll(const vector<pair<string, Appointment>> &appointments,
 
         string patientKey = appointments[i].second.GetPatientKey();
 
-        auto patientIt = find_if(patients.begin(), patients.end(), [&patientKey](const pair<string, Patient> &patient) {
-
-            return patient.first == patientKey;
-        });
+        auto patientIt =
+                find_if(patients.begin(), patients.end(),
+                        [&patientKey](const pair<string, Patient> &patient) {
+                            return patient.first == patientKey;
+                        });
 
         patientIt->second.Show();
 
         cout << endl;
         string doctorKey = appointments[i].second.GetDoctorKey();
 
-        auto doctorIt = find_if(doctors.begin(), doctors.end(), [&doctorKey](const pair<string, Doctor> &doctor) {
-
-            return doctor.first == doctorKey;
-
-        });
+        auto doctorIt = find_if(doctors.begin(), doctors.end(),
+                                [&doctorKey](const pair<string, Doctor> &doctor) {
+                                    return doctor.first == doctorKey;
+                                });
 
         doctorIt->second.Show();
 
@@ -338,7 +331,6 @@ void Registry::ShowAll(const vector<pair<string, Appointment>> &appointments,
         cout << "Дата прийому: ";
         date.Show();
         cout << endl;
-
     }
 }
 
@@ -353,15 +345,14 @@ void Registry::AddDoctor() {
     getline(cin, name);
 
     while (name.find_first_of("\n\t ") != string::npos ||
-           name.find_first_of("0123456789") != string::npos ||
-           name.empty()) {
+           name.find_first_of("0123456789") != string::npos || name.empty()) {
 
-        cout << "Введене ім'я містить пробіли, цифри або інші неприпустимі символи!" << endl;
+        cout << "Введене ім'я містить пробіли, цифри або інші неприпустимі символи!"
+             << endl;
         cout << "Введіть ім'я лікаря:" << endl;
         cout << "➡ ";
         getline(cin, name);
     }
-
 
     cout << "Введіть фамілію лікаря:" << endl;
     cout << "➡ ";
@@ -371,7 +362,9 @@ void Registry::AddDoctor() {
            surname.find_first_of("0123456789") != string::npos ||
            surname.empty()) {
 
-        cout << "Введена фамілія містить пробіли, цифри або інші неприпустимі символи!" << endl;
+        cout << "Введена фамілія містить пробіли, цифри або інші неприпустимі "
+                "символи!"
+             << endl;
         cout << "Введіть фамілію лікаря:" << endl;
         cout << "➡ ";
         getline(cin, surname);
@@ -382,9 +375,12 @@ void Registry::AddDoctor() {
     getline(cin, qualification);
 
     while (qualification.find_first_of("\n\t ") != string::npos ||
-           qualification.find_first_of("0123456789") != string::npos || qualification.empty()) {
+           qualification.find_first_of("0123456789") != string::npos ||
+           qualification.empty()) {
 
-        cout << "Введена кваліфікація містить пробіли, цифри або інші неприпустимі символи!" << endl;
+        cout << "Введена кваліфікація містить пробіли, цифри або інші неприпустимі "
+                "символи!"
+             << endl;
         cout << "Введіть кваліфікацію лікаря:" << endl;
         cout << "➡ ";
         getline(cin, qualification);
@@ -406,13 +402,14 @@ void Registry::AddPatient() {
     getline(cin, name);
 
     // string::npos возвращает true если совпадений не найдено,
-    // так как нам нужно наоборот получить true если совпадения найдены, то ставлю !=
-    // find_first_of - поиск в строке первого символа, который совпадает с любым из символов, указанных в аргументах
+    // так как нам нужно наоборот получить true если совпадения найдены, то ставлю
+    // != find_first_of - поиск в строке первого символа, который совпадает с
+    // любым из символов, указанных в аргументах
     while (name.find_first_of("\n\t ") != string::npos ||
-           name.find_first_of("0123456789") != string::npos ||
-           name.empty()) {
+           name.find_first_of("0123456789") != string::npos || name.empty()) {
 
-        cout << "Введене ім'я містить пробіли, цифри або інші неприпустимі символи!" << endl;
+        cout << "Введене ім'я містить пробіли, цифри або інші неприпустимі символи!"
+             << endl;
         cout << "Введіть ім'я пацієнта:" << endl;
         cout << "➡ ";
         getline(cin, name);
@@ -426,7 +423,9 @@ void Registry::AddPatient() {
            surname.find_first_of("0123456789") != string::npos ||
            surname.empty()) {
 
-        cout << "Введена фамілія містить пробіли, цифри або інші неприпустимі символи!" << endl;
+        cout << "Введена фамілія містить пробіли, цифри або інші неприпустимі "
+                "символи!"
+             << endl;
         cout << "Введіть фамілію пацієнта:" << endl;
         cout << "➡ ";
         getline(cin, surname);
@@ -443,7 +442,9 @@ void Registry::AddPatient() {
 
     while (phone.find_first_of("\n\t ") != string::npos || phone.empty()) {
 
-        cout << "Введений номер телефона містить пробіли або інші неприпустимі символи!" << endl;
+        cout << "Введений номер телефона містить пробіли або інші неприпустимі "
+                "символи!"
+             << endl;
         cout << "Введіть номер телефону:" << endl;
         cout << "➡ ";
         getline(cin, phone);
@@ -471,7 +472,8 @@ void Registry::ScheduleAppointment() {
 
     while (month > 12 || month < 0) {
 
-        cout << "Недійсний місяць: " << month << ", " << "оберіть дійсний місяць" << endl;
+        cout << "Недійсний місяць: " << month << ", "
+             << "оберіть дійсний місяць" << endl;
         cout << "Місяць (1-12): " << endl;
         cout << "➡ ";
 
@@ -488,7 +490,8 @@ void Registry::ScheduleAppointment() {
 
     while (day > numberOfMonthDays || day < 0) {
 
-        cout << "У обраному вами місяцю, не існує дня " << day << ", " << "оберіть дійсний день" << endl;
+        cout << "У обраному вами місяцю, не існує дня " << day << ", "
+             << "оберіть дійсний день" << endl;
         cout << "День (1-" << numberOfMonthDays << "): " << endl;
         cout << "➡ ";
 
@@ -509,7 +512,6 @@ void Registry::ScheduleAppointment() {
 
         cin >> hour;
         while (cin.get() != '\n');
-
     }
 
     cout << "Хвилина (0-59): " << endl;
@@ -525,7 +527,6 @@ void Registry::ScheduleAppointment() {
 
         cin >> hour;
         while (cin.get() != '\n');
-
     }
 
     cout << "Оберіть номер необхідного пацієнта" << endl;
@@ -572,7 +573,6 @@ void Registry::RemovePatient() {
         cout << ex.what() << endl;
         return;
     }
-
 }
 
 void Registry::RemoveDoctor() {
@@ -606,8 +606,7 @@ void Registry::RemoveAppointment() {
     try {
 
         Remove(appointmentToDelete);
-    }
-    catch (const exception &ex) {
+    } catch (const exception &ex) {
 
         ex.what();
         return;
