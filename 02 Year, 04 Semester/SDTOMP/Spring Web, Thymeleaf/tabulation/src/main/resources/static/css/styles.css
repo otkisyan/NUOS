@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+.wrapper {
+
+    margin-right: auto;
+    margin-left: auto;
+
+    max-width: 960px;
+
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+label {
+
+    font-family: 'Inter', sans-serif;
+}
+
+input {
+
+    font-family: 'Inter', sans-serif;
+    margin-top: 10px;
+    border: 0;
+    border-bottom: 1px solid black;
+    text-align: center;
+
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+
+    border: 1px;
+    border-radius: 5px;
+    background-color: #197bdd;
+    color: white;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+}
+
+input[disabled] {
+    text-align: center;
+}
+
+input[disabled],
+textarea[disabled],
+select[disabled="disabled"] {
+
+    -webkit-text-fill-color: rgba(0, 0, 0, 1);
+    -webkit-opacity: 1;
+    opacity: 1;
+    color: rgba(0, 0, 0, 1);
+    background: white;
+}
