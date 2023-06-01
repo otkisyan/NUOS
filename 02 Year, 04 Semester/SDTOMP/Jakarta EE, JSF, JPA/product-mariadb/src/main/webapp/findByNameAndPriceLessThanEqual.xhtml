@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<f:view>
+    <h:head>
+
+        <link rel="stylesheet" type="text/css" href="styles.css"/>
+    </h:head>
+
+    <h:body>
+
+        <div class="wrapper">
+
+            <div class="home">
+
+                <p:link outcome="index"><i class="pi pi-home" style="font-size: 2rem;"></i></p:link>
+
+            </div>
+
+            <h:form id="searchForm">
+                <p:outputLabel value="Назва продукту" for="name"/>
+                <br></br>
+                <p:inputText id="name" required="true" value="#{productBean.name}"/>
+                <br></br>
+                <p:outputLabel value="Ціна продукту" for="price"/>
+                <br></br>
+                <p:inputText id="price" required="true" value="#{productBean.productPrice}"/>
+                <p:commandButton value="Знайти" ajax="false" style="margin: 10px;"/>
+
+            </h:form>
+
+            <p:dataTable
+                    value="#{productBean.findByNameAndPriceLessThanEqual(productBean.name, productBean.productPrice)}"
+                    var="p"
+                    stripedRows="true" id="productTable">
+
+                <p:column headerText="ID">
+                    <h:outputText value="#{p.id}"/>
+                </p:column>
+
+                <p:column headerText="Назва">
+                    <h:outputText value="#{p.name}"/>
+                </p:column>
+
+                <p:column headerText="Виробник">
+                    <h:outputText value="#{p.manufacturer.name}"/>
+                </p:column>
+
+                <p:column headerText="Кількість">
+                    <h:outputText value="#{p.amount}"/>
+                </p:column>
+
+                <p:column headerText="Ціна">
+                    <h:outputText value="#{p.price}"/>
+                </p:column>
+
+                <p:column headerText="Термін придатності">
+                    <h:outputText value="#{p.expirationDate}"/>
+                </p:column>
+
+                <p:column headerText="Дія">
+                    <p:commandButton action="#{productBean.removeProduct(p.id)}"
+                                     update="productTable" process="@this" icon="pi pi-times"
+                                     styleClass="rounded-button ui-button-danger ui-button-flat"/>
+                </p:column>
+
+            </p:dataTable>
+
+        </div>
+
+    </h:body>
+</f:view>
+
+</html>
