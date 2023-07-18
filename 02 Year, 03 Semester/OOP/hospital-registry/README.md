@@ -1,4 +1,7 @@
-# hospital-registry
+# 02 Year, 03 Semester - Object-Oriented Programming
+
+## hospital-registry
+
 You can use [DownGit](https://github.com/MinhasKamal/DownGit) to download this directory.
 
 ## Install
