@@ -1,0 +1,15 @@
+CC = gcc
+SOURCES = src/prism_perimeter.c src/prism_surface_area.c src/prism_diagonal.c
+OBJECTS = $(SOURCES:.c=.o)
+TARGET = libprism.dll
+
+library: $(TARGET)
+
+%.o: src/%.c
+	$(CC) -fpic -c $< -o $@
+
+$(TARGET): $(OBJECTS)
+	$(CC) -shared -o $@ $^
+
+clean:
+	rm -f $(OBJECTS)

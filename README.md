@@ -1,7 +1,8 @@
-# NUOS Exercises, Assignments and Projects
+# NUoS[^1] Exercises, Assignments and Projects
 
 Here you can find my coding activity during my university studies. The documentation of projects is not included here.
 These are not all the courses and assignments during semesters - only the coding ones.
+
 
 ### The folder structure is as follows:
 
@@ -21,5 +22,10 @@ These are not all the courses and assignments during semesters - only the coding
   - SDTMP - Software Development Technologies on Modern Platforms
   - ADS - Algorithms and Data Structures
   - PDS - Program and Data Security
+- 03 Year, 05 Semester
+  - CG - Computer Graphics
+  - OS - Operating Systems
 
 _This is not the final version of the repository, as I am still studying, the repository will be gradually supplemented over time._
+
+[^1]: The Admiral Makarov National University of Shipbuilding in Mykolaiv, Ukraine
