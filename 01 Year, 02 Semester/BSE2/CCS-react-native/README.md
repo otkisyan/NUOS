@@ -1,0 +1,1 @@
+# Calculator of communal services (React Native)

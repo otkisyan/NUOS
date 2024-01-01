@@ -1,0 +1,21 @@
+{
+  "translation": {
+    "title": "Calculator of communal services",
+    "subtitle": "Click on the button to go further",
+    "water": "Water",
+    "gas": "Gas",
+    "electricity": "Electricity",
+    "changeLanguage": "Change language",
+    "userInfo": "User information",
+    "modalTitle": "Hello!",
+    "modalContent": "This software is designed for users to make it easier to work on utility service readings and replace the billing ledger. To start using this program, you just need to click the button with the selected utility service (water, gas, electricity), enter in certain fields the meter readings and the tariff specified by the supplier company, and click the 'Calculate' button, the certain field will display the price you will have to pay.",
+
+    "waterTitle": "WATER",
+    "previousEntry": "Previous readings",
+    "newEntry": "New readings",
+    "rate": "Rate",
+    "sum": "Amount to be paid",
+    "saveButton": "Save to archive",
+    "history": "History of readings"
+  }
+}
