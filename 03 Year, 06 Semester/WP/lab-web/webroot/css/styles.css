@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  border: 14px solid #2d72d9;
+}
+
+body {
+  font-family: Lato, "Helvetica Neue", Helvetica, sans-serif;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+a {
+  color: #2d72d9;
+  text-decoration: none;
+}
+
+img {
+  border: none;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-header {
+  padding-bottom: 50px;
+  padding-top: 30px;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.site-header .site-title {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Noto Serif", Georgia, serif;
+  display: inline-block;
+}
+
+.site-title a {
+  color: #2e343b;
+}
+
+.site-header .site-nav {
+  float: right;
+}
+
+.site-header .site-nav li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.site-header .site-nav a {
+  text-decoration: none;
+  color: #9ea5ac;
+  font-weight: 700;
+}
+
+.site-header .site-nav .current a {
+  color: #2d72d9;
+}
+
+.site-description {
+  font-size: 22px;
+  font-style: italic;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #dfdfdf;
+  color: #6b747a;
+  font-family: "Noto Serif", Georgia, serif;
+}
+
+.main-content .post {
+  padding-top: 50px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.post-header .post-date {
+  color: #9ba6ad;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.post-header .post-title {
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+
+.post-header .post-title a {
+  text-decoration: none;
+  color: #2c343c;
+}
+
+.post-header .post-meta {
+  color: #9ba6ad;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.post-header .post-image {
+  margin-bottom: 25px;
+}
+
+.post-content {
+  color: #9ba6ad;
+}
+
+.post-content p {
+  margin-bottom: 25px;
+}
+
+.site-footer {
+  padding-top: 50px;
+  padding-bottom: 25px;
+}
+
+.site-footer .site-info {
+  color: #9ba6ad;
+  font-size: 14px;
+}
+
+.article-comment .input {
+  margin-top: 20px;
+  width: 200px;
+}
+
+.article-comment {
+  margin-top: 30px;
+}
+
+.article-comment form {
+  margin-bottom: 30px;
+}
+
+.article-comment .input {
+  margin-bottom: 15px;
+}
+
+.article-comment .input label {
+  font-weight: bold;
+}
+
+.article-comment .input input[type="text"],
+.article-comment .input select,
+.article-comment .input textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.article-comment .error {
+  color: #d9534f;
+  margin-top: 5px;
+}
+
+.article-comment button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.article-comment button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.article-comment .comment-list {
+  list-style-type: none;
+}
+
+.article-comment .comment {
+  padding: 15px 0px;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.article-comment .comment-author {
+  font-weight: bold;
+}
+
+.article-comment .comment-created {
+  font-size: 14px;
+  color: #666;
+}
+
+.article-comment .comment-rate {
+  margin-top: 5px;
+}
+
+.article-comment .comment-content {
+  margin-top: 10px;
+}
+
+.article-comment .no-comments {
+  color: #666;
+}
+
+@media only screen and (max-width: 640px) {
+  html {
+    border-width: 5px;
+  }
+
+  body {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .post-header .post-title {
+    font-size: 24px;
+  }
+  .site-description .site-title {
+    font-size: 26px;
+  }
+  .main-content .post {
+    padding-bottom: 10px;
+  }
+}

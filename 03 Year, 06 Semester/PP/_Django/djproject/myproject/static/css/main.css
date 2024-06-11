@@ -1,0 +1,42 @@
+div > h1 {
+  color: #09b3bf;
+}
+body > div > div > ol > li {
+  margin: 0 5px;
+}
+
+div.container-image > img {
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 18px;
+  }
+}
+
+.articles-row {
+  margin-bottom: 35px;
+}
+
+div > h1 {
+  color: #383838;
+}
+body > div > nav > div > a > h4 {
+  color: #383838;
+}
+.article-block {
+  background: #fff;
+  color: #383838;
+  box-shadow: 2px 2px 1px #ccc;
+  padding: 10px;
+  margin: 10px;
+}
+
+.article-block a {
+  color: #383838;
+}
+
+body > div > div > ol > li {
+  margin: 0 5px;
+}

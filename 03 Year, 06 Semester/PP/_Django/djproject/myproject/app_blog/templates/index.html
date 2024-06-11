@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% load static %} {% block content %} {% spaceless %}
+<h2></h2>
+
+{% if categories %}
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    {% for item in categories %}
+    <a href="{{ item.get_absolute_url }}">
+      <h4>{{ item.category }}</h4>
+    </a>
+    {% endfor %}
+  </div>
+</nav>
+{% endif %} {% if articles %} {% for item in articles %}
+<div class="article-block">
+  <a href="{{ item.get_absolute_url }}">
+    <h4>{{ item.title }}</h4>
+  </a>
+  <h5></h5>
+  <p>{{ item.description|safe|escape|striptags|truncatewords_html:32 }}</p>
+</div>
+{% endfor %} {% endif %} {% endspaceless %} {% endblock %}

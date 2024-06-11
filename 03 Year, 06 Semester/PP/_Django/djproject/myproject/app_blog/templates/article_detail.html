@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% load static %} {% block content %} {% spaceless %}
+  <div>
+    <h3>{{ item.title }}</h3>
+    <h5>{{ item.pub_date|date:"d E Y"|safe|linebreaks }}</h5>
+  </div>
+  <div>{{ item.description|escape|safe }}</div>
+  {% include 'fotorama.html' with images=images %}
+</div>
+{% endspaceless %} {% endblock %}

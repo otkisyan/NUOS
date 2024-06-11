@@ -3,7 +3,6 @@
 Here you can find my coding activity during my university studies. The documentation of projects is not included here.
 These are not all the courses and assignments during semesters - only the coding ones.
 
-
 ### The folder structure is as follows:
 
 - 01 Year, 01 Semester
@@ -25,6 +24,10 @@ These are not all the courses and assignments during semesters - only the coding
 - 03 Year, 05 Semester
   - CG - Computer Graphics
   - OS - Operating Systems
+- 03 Year, 06 Semester
+  - FLP - Functional and Logic Programming
+  - PP - Python Programming
+  - WP - Web Programming
 
 _This is not the final version of the repository, as I am still studying, the repository will be gradually supplemented over time._
 
