@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<f:view>
+    <h:head>
+        <title>Sinh(x)</title>
+    </h:head>
+    <h:body>
+        <p:link value = "to Home Page" outcome = "index" />
+        <h:form id="sinhForm">
+            <h2>Sinh Calculation</h2>
+
+                <h:outputLabel for="x" value="Value of x:"/>
+                <p:inputNumber id="x" value="#{sinhCalculatorBean.x}" decimalPlaces="3"/>
+
+                <h:outputLabel for="n" value="Number of Terms (n):"/>
+                <p:inputNumber id="n" value="#{sinhCalculatorBean.n}"/>
+
+                <h:outputLabel for="e" value="Epsilon (e):"/>
+                <p:inputNumber id="e" value="#{sinhCalculatorBean.e}" decimalPlaces="3"/>
+                <p:commandButton value="Calculate sinh(x)" action="#{sinhCalculatorBean.calculateSinh}" ajax="false"/>
+        </h:form>
+
+
+            <p:panel id="sinhResult" rendered="#{not empty sinhCalculatorBean.sinhResult}">
+                <h2>Sinh Calculation Results</h2>
+                <h:outputText value="Sum of n terms: #{sinhCalculatorBean.sinhResult.sumN}" /><br/>
+                <h:outputText value="Sum of terms > e: #{sinhCalculatorBean.sinhResult.sinhResultWithE.sumWithE}" /><br/>
+                <h:outputText value="Number of terms > e: #{sinhCalculatorBean.sinhResult.sinhResultWithE.sumWithETermCount}" /><br/>
+                <h:outputText value="Exact sinh(x): #{sinhCalculatorBean.sinhResult.exactSinh}" /><br/>
+            </p:panel>
+    </h:body>
+</f:view>
+</html>

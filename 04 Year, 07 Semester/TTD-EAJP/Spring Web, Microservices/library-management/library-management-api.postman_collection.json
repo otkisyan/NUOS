@@ -1,0 +1,303 @@
+{
+	"info": {
+		"_postman_id": "0385f32c-1afb-4980-95d6-c446fdb8c0c2",
+		"name": "library-management-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26120236"
+	},
+	"item": [
+		{
+			"name": "localhost:8082/books",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/books",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8082/books/id/genres",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"mybook\",\n    \"authorId\": \"1\",\n    \"genreIds\": [1, 2] \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/books/2/genres",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"books",
+						"2",
+						"genres"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8082/books/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"best book\",\n    \"authorId\": \"1\",\n    \"genreIds\": [1, 2] \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/books",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8082/books/id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"mybook\",\n    \"authorId\": \"1\",\n    \"genreIds\": [1, 2] \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/books/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8082/books/id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"mybook\",\n    \"authorId\": \"1\",\n    \"genreIds\": [1, 2] \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/books/15",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"books",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Review",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\": \"myreview\",\n    \"rating\": 4,\n    \"bookId\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/reviews",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Review",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\": \"myreview\",\n    \"rating\": 2,\n    \"bookId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/reviews/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"reviews",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Reviews",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\": \"myreview\",\n    \"rating\": 2,\n    \"bookId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/reviews",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Reviews By Book Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\": \"myreview\",\n    \"rating\": 2,\n    \"bookId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/reviews/book/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"reviews",
+						"book",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Review By Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\": \"myreview\",\n    \"rating\": 2,\n    \"bookId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/reviews/8",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"reviews",
+						"8"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
