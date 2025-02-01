@@ -21,6 +21,7 @@ These are not all the courses and assignments during semesters - only the coding
   - SDTMP - Software Development Technologies on Modern Platforms
   - ADS - Algorithms and Data Structures
   - PDS - Program and Data Security
+  - NM - Numerical Methods
 - 03 Year, 05 Semester
   - CG - Computer Graphics
   - OS - Operating Systems
