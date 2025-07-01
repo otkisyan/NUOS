@@ -1,1 +1,1 @@
-# 04 Year, 07 Semester - Organization and technologies of data transmission in computer networks
+# 04 Year, 07 Semester - Organization and Technologies of Data Transmission in Computer Networks

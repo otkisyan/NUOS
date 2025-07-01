@@ -1,0 +1,44 @@
+public class Main {
+    public static void main(String[] args) {
+        int number = 5;
+        if (number > 0) {
+            System.out.println("Число положительное");
+        } else {
+            System.out.println("Число неположительное");
+        }
+
+        int counter = 0;
+        while (counter < 5) {
+            System.out.println("Текущее значение counter: " + counter);
+            counter++;
+        }
+
+        System.out.println("Цикл:");
+        for(int i = 0; i < 3; i++) {
+            System.out.println("Итерация: " + i);
+        }
+
+        int day = 3;
+        switch (day) {
+            case 1:
+                System.out.println("Понедельник");
+                break;
+            case 2:
+                System.out.println("Вторник");
+                break;
+            case 3:
+                System.out.println("Среда");
+                break;
+            case 4:
+                System.out.println("Четверг");
+                break;
+            case 5:
+                System.out.println("Пятница");
+                break;
+            default:
+                System.out.println("Выходной");
+                break;
+        }
+    }
+}
+

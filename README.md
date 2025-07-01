@@ -32,7 +32,10 @@ These are not all the courses and assignments during semesters - only the coding
 - 04 Year, 07 Semester
   - TTD-EAJP - Tools and Technologies for Developing Enterprise Applications on the Java Platform
   - AIS - Artificial Intelligence Systems
-  - OTDT-CN - Organization and technologies of data transmission in computer networks
+  - OTDT-CN - Organization and Technologies of Data Transmission in Computer Networks
+- 04 Year, 08 Semester
+  - EMSE - Empirical Methods in Software Engineering
+  - SP - System Programming
 
 _This is not the final version of the repository, as I am still studying, the repository will be gradually supplemented over time._
 

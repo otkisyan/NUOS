@@ -1,0 +1,10 @@
+Ключові слова та їх байтові коди:
+if -> 1
+else -> 2
+while -> 3
+for -> 4
+switch -> 5
+case -> 6
+break -> 7
+default -> 8
+whitespace -> 9
